@@ -19,7 +19,10 @@ class RPCError(Exception):
     pass
 
 
-def rpc(url, method, *params):  # Client für JSON-RPC 1.0 über HTTP(S) POST
+def rpc(url, method, *params):
+    """
+    JSON-RPC 1.0 über HTTP(S) POST
+    """
     call_id = os.urandom(16).hex()
     json_data = {"method": method, "params": params, "id": call_id}
     got = requests.post(url, json=json_data).json()
