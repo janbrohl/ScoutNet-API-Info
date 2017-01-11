@@ -6,14 +6,19 @@ Es gib im Grunde genommen 2 APIs:
 * den Webservice der laut Doku_ "RPC_ im REST_-Stil mit JSON_ als Datenaustauschformat implementiert" - im weiteren Text **SN-REST** genannt
 * den anderen Webservice den man per JSON-RPC_ (1.0) über HTTP(S) POST ansprechen kann - im weiteren Text **SN-RPC** genannt
 
+
 Objekte in den Antworten der APIs enthalten Typhinweise: Bei SN-REST unter dem Namen ``"kind"`` bei SN-RPC unter ``"type"``.
 
 
 
-Die Codebeispiele habe ich mit Python_ 3.5 und requests_ 2.12 getestet.
+Codebeispiele
+---------------
+
+Getestet mit Python_ 3.5 und requests_ 2.12. 
 
 .. include:: ../sn_clients.py
    :code: python
+
 
 
 +------------------------------------+---------------------------------------------------------------+-------------------------------------------------------+
@@ -21,7 +26,7 @@ Die Codebeispiele habe ich mit Python_ 3.5 und requests_ 2.12 getestet.
 +====================================+===============================================================+=======================================================+
 | Events für Gruppe 4 abfragen       | ``sn_rest("group/4/events/")``                                | ``sn_rpc_get("4",{"events":{}})``                     |
 +------------------------------------+---------------------------------------------------------------+-------------------------------------------------------+
-| Events für Gruppe 4 und 5          | ``sn_rest("/events/","group_id=? or group_id=?",["4","5"])``  | ``sn_rpc_get(["4","5"],{"events":{}})``               |
+| Events für Gruppe 4 und 3          | ``sn_rest("/events/","group_id=? or group_id=?",["4","3"])``  | ``sn_rpc_get(["4","3"],{"events":{}})``               |
 | abfragen                           |                                                               |                                                       |
 +------------------------------------+---------------------------------------------------------------+-------------------------------------------------------+
 | Events für Gruppe 4 abfragen       | ``sn_rest("group/4/events/", "end_date < ?",["2012-01-12"])`` | ``sn_rpc_get("4",{"events":{"before":"12.01.2012"})`` |
