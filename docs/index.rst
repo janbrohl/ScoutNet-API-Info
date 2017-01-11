@@ -39,6 +39,12 @@ Getestet mit Python_ 3.5 und requests_ 2.12.
 +------------------------------------+---------------------------------------------------------------+-------------------------------------------------------+
 
 
+.. toctree::
+   :maxdepth: 2
+   
+   sn_rest
+   sn_rpc
+
 .. _RPC: https://en.wikipedia.org/wiki/Remote_procedure_call
 
 .. _REST: https://en.wikipedia.org/wiki/Representational_state_transfer
