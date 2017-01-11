@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Info zu den ScoutNet.de APIs &#8212; ScoutNet.de APIs 0.1 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="info-zu-den-scoutnet-de-apis">
+<h1>Info zu den ScoutNet.de APIs<a class="headerlink" href="#info-zu-den-scoutnet-de-apis" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Es gib im Grunde genommen 2 APIs:</p>
+<ul class="simple">
+<li>den Webservice der laut <a class="reference external" href="https://www.scoutnet.de/api-info/webservice.html">Doku</a> &#8220;<a class="reference external" href="https://en.wikipedia.org/wiki/Remote_procedure_call">RPC</a> im <a class="reference external" href="https://en.wikipedia.org/wiki/Representational_state_transfer">REST</a>-Stil mit <a class="reference external" href="https://en.wikipedia.org/wiki/JSON">JSON</a> als Datenaustauschformat implementiert&#8221; - im weiteren Text <strong>SN-REST</strong> genannt</li>
+<li>den anderen Webservice den man per <a class="reference external" href="https://en.wikipedia.org/wiki/JSON-RPC">JSON-RPC</a> (1.0) über HTTP(S) POST ansprechen kann - im weiteren Text <strong>SN-RPC</strong> genannt</li>
+</ul>
+<p>Objekte in den Antworten der APIs enthalten Typhinweise: Bei SN-REST unter dem Namen <code class="docutils literal"><span class="pre">&quot;kind&quot;</span></code> bei SN-RPC unter <code class="docutils literal"><span class="pre">&quot;type&quot;</span></code>.</p>
+<p>Die Codebeispiele habe ich mit <a class="reference external" href="https://www.python.org/">Python</a> 3.5 und <a class="reference external" href="http://docs.python-requests.org/en/master/">requests</a> 2.12 getestet.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">SN_REST_BASE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://www.scoutnet.de/api/0.2/&quot;</span>
+
+<span class="n">SN_RPC_URL</span> <span class="o">=</span> <span class="s2">&quot;https://www.scoutnet.de/jsonrpc/server.php&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">sn_rest</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">args</span><span class="p">:</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;json&quot;</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">args</span><span class="p">)}</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">return</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">SN_REST_BASE_URL</span> <span class="o">+</span> <span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+
+<span class="k">class</span> <span class="nc">RPCError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+
+<span class="k">def</span> <span class="nf">rpc</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="o">*</span><span class="n">params</span><span class="p">):</span>  <span class="c1"># Client für JSON-RPC 1.0 über HTTP(S) POST</span>
+    <span class="n">call_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">urandom</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span><span class="o">.</span><span class="n">hex</span><span class="p">()</span>
+    <span class="n">json_data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="n">method</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="n">params</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">call_id</span><span class="p">}</span>
+    <span class="n">got</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">json_data</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">e</span> <span class="o">=</span> <span class="n">got</span><span class="p">[</span><span class="s2">&quot;error&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">e</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">RPCError</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">got</span><span class="p">[</span><span class="s2">&quot;result&quot;</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">sn_rpc_get</span><span class="p">(</span><span class="o">*</span><span class="n">params</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">rpc</span><span class="p">(</span><span class="n">SN_RPC_URL</span><span class="p">,</span> <span class="s2">&quot;get_data_by_global_id&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="41%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Ich will</th>
+<th class="head">SN-REST</th>
+<th class="head">SN-RPC</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Events für Gruppe 4 abfragen</td>
+<td><code class="docutils literal"><span class="pre">sn_rest(&quot;group/4/events/&quot;)</span></code></td>
+<td><code class="docutils literal"><span class="pre">sn_rpc_get(&quot;4&quot;,{&quot;events&quot;:{}})</span></code></td>
+</tr>
+<tr class="row-odd"><td>Events für Gruppe 4 und 5
+abfragen</td>
+<td><code class="docutils literal"><span class="pre">sn_rest(&quot;/events/&quot;,&quot;group_id=?</span> <span class="pre">or</span> <span class="pre">group_id=?&quot;,[&quot;4&quot;,&quot;5&quot;])</span></code></td>
+<td><code class="docutils literal"><span class="pre">sn_rpc_get([&quot;4&quot;,&quot;5&quot;],{&quot;events&quot;:{}})</span></code></td>
+</tr>
+<tr class="row-even"><td>Events für Gruppe 4 abfragen
+die vor dem 12.01.2012 liegen</td>
+<td><code class="docutils literal"><span class="pre">sn_rest(&quot;group/4/events/&quot;,</span> <span class="pre">&quot;end_date</span> <span class="pre">&lt;</span> <span class="pre">?&quot;,[&quot;2012-01-12&quot;])</span></code></td>
+<td><code class="docutils literal"><span class="pre">sn_rpc_get(&quot;4&quot;,{&quot;events&quot;:{&quot;before&quot;:&quot;12.01.2012&quot;})</span></code></td>
+</tr>
+<tr class="row-odd"><td>Info über Gruppe 4 abfragen</td>
+<td><code class="docutils literal"><span class="pre">sn_rest(&quot;group/4/&quot;)</span></code></td>
+<td><code class="docutils literal"><span class="pre">sn_rpc_get(&quot;4&quot;,{&quot;index&quot;:{}})</span></code></td>
+</tr>
+<tr class="row-even"><td>Übergeordnete Gruppe zu  Gruppe 4
+suchen</td>
+<td><code class="docutils literal"><span class="pre">sn_rest(&quot;group/4/parent/&quot;)</span></code></td>
+<td><code class="docutils literal"><span class="pre">sn_rpc_get(&quot;4&quot;,{&quot;index&quot;:{}})</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Los" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Jan Brohl.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
