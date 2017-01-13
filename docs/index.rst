@@ -44,8 +44,9 @@ Inhalt
 .. toctree::
    :maxdepth: 2
    
-   sn_rest
    sn_rpc
+   sn_rest
+   sn_rest_schemas
 
 .. _RPC: https://en.wikipedia.org/wiki/Remote_procedure_call
 

@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "5 schema.",
+  "description": "An explanation about the purpose of this instance.",
+  "properties": {
+    "kind": {
+      "type": "string",
+      "title": "Kind schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "id": {
+      "type": "string",
+      "title": "Id schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "name": {
+      "type": "string",
+      "title": "Name schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "start_age": {
+      "type": "string",
+      "title": "Start_age schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "end_age": {
+      "type": "string",
+      "title": "End_age schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "color": {
+      "type": "string",
+      "title": "Color schema.",
+      "description": "An explanation about the purpose of this instance."
+    }
+  }
+}

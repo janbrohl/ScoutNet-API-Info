@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "Root schema.",
+  "description": "An explanation about the purpose of this instance.",
+  "properties": {
+    "kind": {
+      "type": "string",
+      "title": "Kind schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "global_id": {
+      "type": "string",
+      "title": "Global_id schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "name": {
+      "type": "string",
+      "title": "Name schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "zip": {
+      "type": "string",
+      "title": "Zip schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "city": {
+      "type": "string",
+      "title": "City schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "district": {
+      "type": "string",
+      "title": "District schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "internal_id": {
+      "type": "string",
+      "title": "Internal_id schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "layer": {
+      "type": "string",
+      "title": "Layer schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "federal_state": {
+      "type": "string",
+      "title": "Federal_state schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "country": {
+      "type": "string",
+      "title": "Country schema.",
+      "description": "An explanation about the purpose of this instance."
+    }
+  }
+}

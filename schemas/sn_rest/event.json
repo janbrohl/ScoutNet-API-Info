@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "Root schema.",
+  "description": "An explanation about the purpose of this instance.",
+  "properties": {
+    "kind": {
+      "type": "string",
+      "title": "Kind schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "id": {
+      "type": "string",
+      "title": "Id schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "uid": {
+      "type": "string",
+      "title": "Uid schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "group_id": {
+      "type": "string",
+      "title": "Group_id schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "title": {
+      "type": "string",
+      "title": "Title schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "organizer": {
+      "type": "string",
+      "title": "Organizer schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "target_group": {
+      "type": "string",
+      "title": "Target_group schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "start_date": {
+      "type": "string",
+      "title": "Start_date schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "start_time": {
+      "type": "null",
+      "title": "Start_time schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "end_date": {
+      "type": "string",
+      "title": "End_date schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "end_time": {
+      "type": "null",
+      "title": "End_time schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "zip": {
+      "type": "string",
+      "title": "Zip schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "location": {
+      "type": "string",
+      "title": "Location schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "url_text": {
+      "type": "string",
+      "title": "Url_text schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "url": {
+      "type": "string",
+      "title": "Url schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "description": {
+      "type": "string",
+      "title": "Description schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "last_modified_by": {
+      "type": "string",
+      "title": "Last_modified_by schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "last_modified_on": {
+      "type": "string",
+      "title": "Last_modified_on schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "keywords": {
+      "type": "object",
+      "title": "Keywords schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "title": "Kind schema.",
+          "description": "An explanation about the purpose of this instance."
+        },
+        "elements": {
+          "type": "object",
+          "title": "Elements schema.",
+          "description": "An explanation about the purpose of this instance."
+        }
+      }
+    }
+  }
+}
