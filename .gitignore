@@ -1,0 +1,5 @@
+activate_env.bat
+cmd_here.bat
+deactivate_env.bat
+env/*
+docs/_build/*

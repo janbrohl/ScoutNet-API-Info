@@ -8,7 +8,7 @@
     
     <title>Info zu den ScoutNet.de APIs &#8212; ScoutNet.de APIs 0.1 Dokumentation</title>
     
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,15 +27,24 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
+    <link rel="next" title="Spezifisches zu SN-REST" href="sn_rest.html" /> 
   </head>
   <body role="document">
-  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
+          <a href="sn_rest.html" title="Spezifisches zu SN-REST"
+             accesskey="N">weiter</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">ScoutNet.de APIs 0.1 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -50,7 +59,9 @@
 <li>den anderen Webservice den man per <a class="reference external" href="https://en.wikipedia.org/wiki/JSON-RPC">JSON-RPC</a> (1.0) über HTTP(S) POST ansprechen kann - im weiteren Text <strong>SN-RPC</strong> genannt</li>
 </ul>
 <p>Objekte in den Antworten der APIs enthalten Typhinweise: Bei SN-REST unter dem Namen <code class="docutils literal"><span class="pre">&quot;kind&quot;</span></code> bei SN-RPC unter <code class="docutils literal"><span class="pre">&quot;type&quot;</span></code>.</p>
-<p>Die Codebeispiele habe ich mit <a class="reference external" href="https://www.python.org/">Python</a> 3.5 und <a class="reference external" href="http://docs.python-requests.org/en/master/">requests</a> 2.12 getestet.</p>
+<div class="section" id="codebeispiele">
+<h2>Codebeispiele<a class="headerlink" href="#codebeispiele" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Getestet mit <a class="reference external" href="https://www.python.org/">Python</a> 3.5 und <a class="reference external" href="http://docs.python-requests.org/en/master/">requests</a> 2.12.</p>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">import</span> <span class="nn">os</span>
@@ -72,7 +83,10 @@
     <span class="k">pass</span>
 
 
-<span class="k">def</span> <span class="nf">rpc</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="o">*</span><span class="n">params</span><span class="p">):</span>  <span class="c1"># Client für JSON-RPC 1.0 über HTTP(S) POST</span>
+<span class="k">def</span> <span class="nf">rpc</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="o">*</span><span class="n">params</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    JSON-RPC 1.0 über HTTP(S) POST</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">call_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">urandom</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span><span class="o">.</span><span class="n">hex</span><span class="p">()</span>
     <span class="n">json_data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="n">method</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="n">params</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">call_id</span><span class="p">}</span>
     <span class="n">got</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">json_data</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
@@ -103,10 +117,10 @@
 <td><code class="docutils literal"><span class="pre">sn_rest(&quot;group/4/events/&quot;)</span></code></td>
 <td><code class="docutils literal"><span class="pre">sn_rpc_get(&quot;4&quot;,{&quot;events&quot;:{}})</span></code></td>
 </tr>
-<tr class="row-odd"><td>Events für Gruppe 4 und 5
+<tr class="row-odd"><td>Events für Gruppe 4 und 3
 abfragen</td>
-<td><code class="docutils literal"><span class="pre">sn_rest(&quot;/events/&quot;,&quot;group_id=?</span> <span class="pre">or</span> <span class="pre">group_id=?&quot;,[&quot;4&quot;,&quot;5&quot;])</span></code></td>
-<td><code class="docutils literal"><span class="pre">sn_rpc_get([&quot;4&quot;,&quot;5&quot;],{&quot;events&quot;:{}})</span></code></td>
+<td><code class="docutils literal"><span class="pre">sn_rest(&quot;/events/&quot;,&quot;group_id=?</span> <span class="pre">or</span> <span class="pre">group_id=?&quot;,[&quot;4&quot;,&quot;3&quot;])</span></code></td>
+<td><code class="docutils literal"><span class="pre">sn_rpc_get([&quot;4&quot;,&quot;3&quot;],{&quot;events&quot;:{}})</span></code></td>
 </tr>
 <tr class="row-even"><td>Events für Gruppe 4 abfragen
 die vor dem 12.01.2012 liegen</td>
@@ -125,19 +139,35 @@ suchen</td>
 </tbody>
 </table>
 </div>
+<div class="section" id="inhalt">
+<h2>Inhalt<a class="headerlink" href="#inhalt" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sn_rest.html">Spezifisches zu SN-REST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sn_rpc.html">Spezifisches zu SN-RPC</a></li>
+</ul>
+</div>
+</div>
+</div>
 
 
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="#">Documentation overview</a><ul>
-  </ul></li>
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Inhalt</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Info zu den ScoutNet.de APIs</a><ul>
+<li><a class="reference internal" href="#codebeispiele">Codebeispiele</a></li>
+<li><a class="reference internal" href="#inhalt">Inhalt</a></li>
 </ul>
-</div>
+</li>
+</ul>
+
+  <h4>Nächstes Thema</h4>
+  <p class="topless"><a href="sn_rest.html"
+                        title="nächstes Kapitel">Spezifisches zu SN-REST</a></p>
   <div role="note" aria-label="source link">
     <h3>Diese Seite</h3>
     <ul class="this-page-menu">
@@ -159,20 +189,24 @@ suchen</td>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="footer">
-      &copy;2017, Jan Brohl.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
-      
-      |
-      <a href="_sources/index.rst.txt"
-          rel="nofollow">Page source</a>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
+          <a href="sn_rest.html" title="Spezifisches zu SN-REST"
+             >weiter</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">ScoutNet.de APIs 0.1 Dokumentation</a> &#187;</li> 
+      </ul>
     </div>
-
-    
-
-    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Jan Brohl.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1 erstellt.
+    </div>
   </body>
 </html>
