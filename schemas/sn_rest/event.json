@@ -45,7 +45,6 @@
       "description": "An explanation about the purpose of this instance."
     },
     "start_time": {
-      "type": ["string","null"],
       "title": "Start_time schema.",
       "description": "An explanation about the purpose of this instance."
     },
@@ -55,7 +54,6 @@
       "description": "An explanation about the purpose of this instance."
     },
     "end_time": {
-      "type": ["string","null"],
       "title": "End_time schema.",
       "description": "An explanation about the purpose of this instance."
     },
