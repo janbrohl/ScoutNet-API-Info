@@ -45,12 +45,23 @@ Gruppen
     Direkt übergeordnete Gruppe zu einer Gruppe abrufen.
 
     :param group_id: ID der Gruppe
+    
+.. http:get:: https://www.scoutnet.de/api/0.2/group/(group_id)/parent/(layer)/
+
+    Übergeordnete Gruppe zu einer Gruppe abrufen.
+
+    :param group_id: ID der Gruppe
+    :param layer: Ebene der übergeordneten Gruppe
 
 .. http:get:: https://www.scoutnet.de/api/0.2/group/(group_id)/parents/
 
     Sammlung übergeordneter Gruppen zu einer Gruppe abrufen.
+    
+    .. todo:: was bedeutet der options-parameter?
 
     :param group_id: ID der Gruppe
+    
+    
 
 .. http:get:: https://www.scoutnet.de/api/0.2/group/(group_id)/urls/
 
