@@ -1,3 +1,5 @@
+.. sn_rpc:
+
 Spezifisches zu SN-RPC
 ======================
 

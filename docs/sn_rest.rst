@@ -1,3 +1,5 @@
+.. _sn_rest:
+
 Spezifisches zu SN-REST
 ========================
 
@@ -11,14 +13,14 @@ Gruppen
 
     Eine Gruppe abrufen.
 
-    :query JSON-Array json: PfadiQL-Anfrage
+    :query JSON-Array json: :ref:`pfadiql`-Anfrage
 
 
 .. http:get:: https://www.scoutnet.de/api/0.2/groups/
 
     Eine Sammlung von Gruppen abrufen.
 
-    :query JSON-Array json: PfadiQL-Anfrage
+    :query JSON-Array json: :ref:`pfadiql`-Anfrage
 
 
 .. http:get:: https://www.scoutnet.de/api/0.2/group/(group_id)/
@@ -83,7 +85,7 @@ Events
 
     Event abrufen.
 
-    :query JSON-Array json: PfadiQL-Anfrage
+    :query JSON-Array json: :ref:`pfadiql`-Anfrage
 
 
 
@@ -91,7 +93,7 @@ Events
 
     Eine Sammlung von Events abrufen.
 
-    :query JSON-Array json: PfadiQL-Anfrage
+    :query JSON-Array json: :ref:`pfadiql`-Anfrage
 
 .. http:get:: https://www.scoutnet.de/api/0.2/event/(event_id)/
 
@@ -112,7 +114,7 @@ URLs
 
     URL abrufen.
 
-    :query JSON-Array json: PfadiQL-Anfrage
+    :query JSON-Array json: :ref:`pfadiql`-Anfrage
 
 
 
@@ -120,7 +122,7 @@ URLs
 
     Eine Sammlung von URLs abrufen.
 
-    :query JSON-Array json: PfadiQL-Anfrage
+    :query JSON-Array json: :ref:`pfadiql`-Anfrage
 
 .. http:get:: https://www.scoutnet.de/api/0.2/url/(url_id)/
 
@@ -136,17 +138,18 @@ Stufen
 
     Stufe abrufen.
 
-    :query JSON-Array json: PfadiQL-Anfrage
+    :query JSON-Array json: :ref:`pfadiql`-Anfrage
 
 
 .. http:get:: https://www.scoutnet.de/api/0.2/sections/
 
     Eine Sammlung von Stufen abrufen.
 
-    :query JSON-Array json: PfadiQL-Anfrage
+    :query JSON-Array json: :ref:`pfadiql`-Anfrage
 
 .. http:get:: https://www.scoutnet.de/api/0.2/section/(section_id)/
 
     Stufe abrufen.
 
     :param section_id: ID der Stufe
+	
