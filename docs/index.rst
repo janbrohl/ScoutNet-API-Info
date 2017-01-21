@@ -16,8 +16,10 @@ Codebeispiele
 
 Getestet mit Python_ 3.5 und requests_ 2.12. 
 
-.. include:: ../sn_clients.py
-   :code: python
+.. literalinclude:: ../sn_clients.py
+   :language: python
+   :linenos:
+   
 
 
 
@@ -43,6 +45,7 @@ Inhalt
 
 .. toctree::
    :maxdepth: 2
+   
    
    sn_rpc
    sn_rest
