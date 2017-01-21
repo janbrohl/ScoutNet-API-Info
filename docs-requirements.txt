@@ -1,3 +1,4 @@
 sphinx
 sphinxcontrib-httpdomain
-sphinxcontrib-jsonschema
+# sphinxcontrib-jsonschema
+https://github.com/janbrohl/sphinxcontrib-jsonschema/archive/master.zip
