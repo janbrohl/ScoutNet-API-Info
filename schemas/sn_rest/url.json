@@ -22,6 +22,7 @@
     "url": {
       "type": "string",
       "title": "Url schema.",
+	  "format": "uri",
       "description": "An explanation about the purpose of this instance."
     },
     "text": {

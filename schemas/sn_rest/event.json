@@ -77,6 +77,7 @@
     "url": {
       "type": "string",
       "title": "Url schema.",
+	  "format": "uri",
       "description": "An explanation about the purpose of this instance."
     },
     "description": {
@@ -92,6 +93,7 @@
     "last_modified_on": {
       "type": "string",
       "title": "Last_modified_on schema.",
+	  "format": "date-time",
       "description": "An explanation about the purpose of this instance."
     },
     "keywords": {
