@@ -1,6 +1,6 @@
 .. _sn_rest:
 
-Spezifisches zu SN-REST
+SN-REST
 ========================
 
 Noch gibt es hier nicht so viel zu sehen aber es gibt schon eine Doku auf https://www.scoutnet.de/api-info/webservice.html

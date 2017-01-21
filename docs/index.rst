@@ -48,6 +48,7 @@ Inhalt
    
    
    sn_rpc
+   sn_rpc_schemas
    sn_rest
    sn_rest_schemas
 

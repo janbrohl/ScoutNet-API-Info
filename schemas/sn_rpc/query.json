@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "Root schema.",
+  "description": "An explanation about the purpose of this instance.",
+  "properties": {
+    "events": {
+      "type": "object",
+      "title": "Events schema.",
+      "description": "An explanation about the purpose of this instance.",
+	  "properties": {
+	    "limit": {
+		  "type":"integer",
+		  "title": "Limit schema.",
+          "description": "An explanation about the purpose of this instance."
+		},
+		"before": {
+		  "type":"string",
+		  "title": "Before schema.",
+          "description": "An explanation about the purpose of this instance."
+		},
+		"beforeDate": {
+		  "type":"string",
+		  "title": "BeforeDate schema.",
+          "description": "An explanation about the purpose of this instance."
+		},
+		"afterDate": {
+		  "type":"string",
+		  "title": "AfterDate schema.",
+          "description": "An explanation about the purpose of this instance."
+		},
+		"uid": {
+		  "type":"string",
+		  "title": "Uid schema.",
+          "description": "An explanation about the purpose of this instance."
+		}
+	  }
+    },
+    "index": {
+      "type": "object",
+      "title": "Index schema.",
+      "description": "An explanation about the purpose of this instance.",
+	  "properties": {
+	    "limit": {
+		  "type":"integer",
+		  "title": "Limit schema.",
+          "description": "An explanation about the purpose of this instance."
+		},
+		"deeps": {
+		  "type":"integer",
+		  "title": "Deeps schema.",
+          "description": "An explanation about the purpose of this instance."
+		},
+		"uid": {
+		  "type":"string",
+		  "title": "Uid schema.",
+          "description": "An explanation about the purpose of this instance."
+		}
+	  }
+    },
+    "event_ids": {
+      "type": "object",
+      "title": "Event_ids schema.",
+      "description": "An explanation about the purpose of this instance.",
+	  "properties": {
+	    "limit": {
+		  "type":"integer",
+		  "title": "Limit schema.",
+          "description": "An explanation about the purpose of this instance."
+		},
+		"before": {
+		  "type":"string",
+		  "title": "Before schema.",
+          "description": "An explanation about the purpose of this instance."
+		},
+		"beforeDate": {
+		  "type":"string",
+		  "title": "BeforeDate schema.",
+          "description": "An explanation about the purpose of this instance."
+		},
+		"afterDate": {
+		  "type":"string",
+		  "title": "AfterDate schema.",
+          "description": "An explanation about the purpose of this instance."
+		},
+		"uid": {
+		  "type":"string",
+		  "title": "Uid schema.",
+          "description": "An explanation about the purpose of this instance."
+		}
+	  }
+    },
+    "kalenders": {
+      "type": "object",
+      "title": "Kalenders schema.",
+      "description": "An explanation about the purpose of this instance.",
+	  "properties": {
+	    "limit": {
+		  "type":"integer",
+		  "title": "Limit schema.",
+          "description": "An explanation about the purpose of this instance."
+		},
+		"uid": {
+		  "type":"string",
+		  "title": "Uid schema.",
+          "description": "An explanation about the purpose of this instance."
+		}
+	  }
+    }
+  }
+}

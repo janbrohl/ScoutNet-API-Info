@@ -1,6 +1,6 @@
 .. sn_rpc:
 
-Spezifisches zu SN-RPC
+SN-RPC
 ======================
 
 Alle Aufrufe gehen per JSON-RPC (1.0) per HTTP-POST an die selbe URL:
@@ -14,7 +14,7 @@ Die Doku zu den Funktionen ist fast direkt kopiert aus dem Server-Code.
 	Return Data
 	 
 	:param array|string global_id:	Global id for which we want elements
-	:param object query:		Query to filter the elements (object: ``"<type>"{"key":attribute to be filtered e.g. "uid", "afterDate", "beforeDate"))`` 
+	:param object query:		:ref:`sn_rpc_query` to filter the elements
 	:returns: Elements as object with structure : ``{"type":<type>,"content":<object>} where <object> could be {"eventName":<name>,"eventDate":<date>,...}``
 	
 .. js:function:: checkPermission(type, global_id, username, auth)
