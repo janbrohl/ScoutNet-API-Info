@@ -11,53 +11,53 @@ Gruppen
 
 .. http:get:: https://www.scoutnet.de/api/0.2/group/
 
-    Eine Gruppe abrufen.
+    Eine Gruppe (:ref:`sn_rest_group`) abrufen.
 
     :query JSON-Array json: :ref:`pfadiql`-Anfrage
 
 
 .. http:get:: https://www.scoutnet.de/api/0.2/groups/
 
-    Eine Sammlung von Gruppen abrufen.
+    Eine Sammlung (:ref:`sn_rest_collection`) von Gruppen (:ref:`sn_rest_group`) abrufen.
 
     :query JSON-Array json: :ref:`pfadiql`-Anfrage
 
 
 .. http:get:: https://www.scoutnet.de/api/0.2/group/(group_id)/
 
-    Eine Gruppe abrufen.
+    Eine Gruppe (:ref:`sn_rest_group`) abrufen.
 
     :param group_id: ID der Gruppe
 
 
 .. http:get:: https://www.scoutnet.de/api/0.2/group/(group_id)/events/
 
-    Events zu einer Gruppe abrufen.
+    Sammlung (:ref:`sn_rest_collection`) von Events (:ref:`sn_rest_event`) zu einer Gruppe abrufen.
 
     :param group_id: ID der Gruppe
 
 .. http:get:: https://www.scoutnet.de/api/0.2/group/(group_id)/children/
 
-    Untergeordnete Gruppen zu einer Gruppe abrufen.
+    Sammlung (:ref:`sn_rest_collection`) von untergeordneten Gruppen (:ref:`sn_rest_group`) zu einer Gruppe abrufen.
 
     :param group_id: ID der Gruppe
 
 .. http:get:: https://www.scoutnet.de/api/0.2/group/(group_id)/parent/
 
-    Direkt übergeordnete Gruppe zu einer Gruppe abrufen.
+    Direkt übergeordnete Gruppe (:ref:`sn_rest_group`) zu einer Gruppe abrufen.
 
     :param group_id: ID der Gruppe
     
 .. http:get:: https://www.scoutnet.de/api/0.2/group/(group_id)/parent/(layer)/
 
-    Übergeordnete Gruppe zu einer Gruppe abrufen.
+    Übergeordnete Gruppe (:ref:`sn_rest_group`) zu einer Gruppe abrufen.
 
     :param group_id: ID der Gruppe
     :param layer: Ebene der übergeordneten Gruppe
 
 .. http:get:: https://www.scoutnet.de/api/0.2/group/(group_id)/parents/
 
-    Sammlung übergeordneter Gruppen zu einer Gruppe abrufen.
+    Sammlung (:ref:`sn_rest_collection`) übergeordneter Gruppen (:ref:`sn_rest_group`) zu einer Gruppe abrufen.
     
     .. todo:: was bedeutet der options-parameter?
 
@@ -67,13 +67,13 @@ Gruppen
 
 .. http:get:: https://www.scoutnet.de/api/0.2/group/(group_id)/urls/
 
-    Sammlung von URLs zu einer Gruppe abrufen.
+    Sammlung (:ref:`sn_rest_collection`) von URLs (:ref:`sn_rest_url`) zu einer Gruppe abrufen.
 
     :param group_id: ID der Gruppe
 
 .. http:get:: https://www.scoutnet.de/api/0.2/group/(group_id)/urls/
 
-    Sammlung von Stufen zu einer Gruppe abrufen.
+    Sammlung (:ref:`sn_rest_collection`) von Stufen (:ref:`sn_rest_section`) zu einer Gruppe abrufen.
 
     :param group_id: ID der Gruppe
 
@@ -83,7 +83,7 @@ Events
 
 .. http:get:: https://www.scoutnet.de/api/0.2/event/
 
-    Event abrufen.
+    Event (:ref:`sn_rest_event`) abrufen.
 
     :query JSON-Array json: :ref:`pfadiql`-Anfrage
 
@@ -91,19 +91,19 @@ Events
 
 .. http:get:: https://www.scoutnet.de/api/0.2/events/
 
-    Eine Sammlung von Events abrufen.
+    Eine Sammlung (:ref:`sn_rest_collection`) von Events (:ref:`sn_rest_event`) abrufen.
 
     :query JSON-Array json: :ref:`pfadiql`-Anfrage
 
 .. http:get:: https://www.scoutnet.de/api/0.2/event/(event_id)/
 
-    Event abrufen.
+    Event (:ref:`sn_rest_event`) abrufen.
 
     :param event_id: ID des Events
 
 .. http:get:: https://www.scoutnet.de/api/0.2/event/(event_id)/group/
 
-    Gruppe zu Event abrufen.
+    Gruppe (:ref:`sn_rest_group`) zu Event abrufen.
 
     :param event_id: ID des Events
 
@@ -112,7 +112,7 @@ URLs
 
 .. http:get:: https://www.scoutnet.de/api/0.2/url/
 
-    URL abrufen.
+    URL (:ref:`sn_rest_url`) abrufen.
 
     :query JSON-Array json: :ref:`pfadiql`-Anfrage
 
@@ -120,13 +120,13 @@ URLs
 
 .. http:get:: https://www.scoutnet.de/api/0.2/urls/
 
-    Eine Sammlung von URLs abrufen.
+    Eine Sammlung (:ref:`sn_rest_collection`) von URLs (:ref:`sn_rest_url`) abrufen.
 
     :query JSON-Array json: :ref:`pfadiql`-Anfrage
 
 .. http:get:: https://www.scoutnet.de/api/0.2/url/(url_id)/
 
-    URL abrufen.
+    URL (:ref:`sn_rest_url`) abrufen.
 
     :param url_id: ID der URL
 
@@ -136,20 +136,20 @@ Stufen
 
 .. http:get:: https://www.scoutnet.de/api/0.2/section/
 
-    Stufe abrufen.
+    Stufe (:ref:`sn_rest_section`) abrufen.
 
     :query JSON-Array json: :ref:`pfadiql`-Anfrage
 
 
 .. http:get:: https://www.scoutnet.de/api/0.2/sections/
 
-    Eine Sammlung von Stufen abrufen.
+    Eine Sammlung (:ref:`sn_rest_collection`) von Stufen (:ref:`sn_rest_section`) abrufen.
 
     :query JSON-Array json: :ref:`pfadiql`-Anfrage
 
 .. http:get:: https://www.scoutnet.de/api/0.2/section/(section_id)/
 
-    Stufe abrufen.
+    Stufe (:ref:`sn_rest_section`) abrufen.
 
     :param section_id: ID der Stufe
 	
