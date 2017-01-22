@@ -15,7 +15,7 @@ Die Doku zu den Funktionen ist fast direkt kopiert aus dem Server-Code.
 	 
 	:param array|string global_id:	Global id for which we want elements
 	:param object query:		:ref:`sn_rpc_query` to filter the elements
-	:returns: Elements as object with structure : ``{"type":<type>,"content":<object>} where <object> could be {"eventName":<name>,"eventDate":<date>,...}``
+	:returns: Elemente als Attribute eines Objects - die Namen sind zusammengesetzt aus :ref:`sn_rpc_typen` und IDs
 	
 .. js:function:: checkPermission(type, global_id, username, auth)
 
