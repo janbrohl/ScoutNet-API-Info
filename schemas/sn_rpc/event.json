@@ -1,0 +1,132 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"title": "Root schema.",
+	"description": "An explanation about the purpose of this instance.",
+	"properties": {
+		"type": {
+			"type": "string",
+			"title": "Type schema.",
+			"description": "An explanation about the purpose of this instance."
+		},
+		"content": {
+			"type": "object",
+			"title": "Content schema.",
+			"description": "An explanation about the purpose of this instance.",
+			"properties": {
+				"UID": {
+					"type": "integer",
+					"title": "UID schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"ZIP": {
+					"type": "string",
+					"title": "ZIP schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"Kalender": {
+					"type": "string",
+					"title": "Kalender schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"Organizer": {
+					"type": "string",
+					"title": "Organizer schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"SSID": {
+					"type": "string",
+					"title": "SSID schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"Target_Group": {
+					"type": "string",
+					"title": "Target_Group schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"Start": {
+					"type": "string",
+					"title": "Start schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"All_Day": {
+					"type": "boolean",
+					"title": "All_Day schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"Stufen": {
+					"type": "array",
+					"title": "Stufen schema.",
+					"description": "An explanation about the purpose of this instance.",
+					"items": {
+						"type": "integer",
+						"title": "0 schema.",
+						"description": "An explanation about the purpose of this instance."
+					}
+				},
+				"Created_By": {
+					"type": "string",
+					"title": "Created_By schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"Description": {
+					"type": "string",
+					"title": "Description schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"Location": {
+					"type": "string",
+					"title": "Location schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"Keywords": {
+					"type": "object",
+					"title": "Keywords schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"URL_Text": {
+					"type": "string",
+					"title": "URL_Text schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"Last_Modified_At": {
+					"type": "string",
+					"title": "Last_Modified_At schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"Created_At": {
+					"type": "string",
+					"title": "Created_At schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"ID": {
+					"type": "integer",
+					"title": "ID schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"Title": {
+					"type": "string",
+					"title": "Title schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"Last_Modified_By": {
+					"type": "string",
+					"title": "Last_Modified_By schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"End": {
+					"type": "string",
+					"title": "End schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"URL": {
+					"type": "string",
+					"title": "URL schema.",
+					"description": "An explanation about the purpose of this instance."
+				}
+			}
+			
+		}
+	}
+	
+}

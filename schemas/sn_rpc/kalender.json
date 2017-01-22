@@ -1,0 +1,65 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"title": "Root schema.",
+	"description": "An explanation about the purpose of this instance.",
+	"properties": {
+		"type": {
+			"type": "string",
+			"title": "Type schema.",
+			"description": "An explanation about the purpose of this instance."
+		},
+		"content": {
+			"type": "object",
+			"title": "Content schema.",
+			"description": "An explanation about the purpose of this instance.",
+			"properties": {
+				"Verband": {
+					"type": "string",
+					"title": "Verband schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"Ebene": {
+					"type": "string",
+					"title": "Ebene schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"Ident": {
+					"type": "string",
+					"title": "Ident schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"Forced_Kategories": {
+					"type": "object",
+					"title": "Forced_Kategories schema.",
+					"description": "An explanation about the purpose of this instance."
+
+
+				},
+				"ID": {
+					"type": "string",
+					"title": "ID schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"Name": {
+					"type": "string",
+					"title": "Name schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"Used_Kategories": {
+					"type": "object",
+					"title": "Used_Kategories schema.",
+					"description": "An explanation about the purpose of this instance."
+				},
+				"Ebene_Id": {
+					"type": "integer",
+					"title": "Ebene_Id schema.",
+					"description": "An explanation about the purpose of this instance."
+				}
+			}
+
+		}
+	}
+
+
+}

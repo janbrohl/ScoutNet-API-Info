@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "Root schema.",
+  "description": "An explanation about the purpose of this instance.",
+  "properties": {
+    "type": {
+      "type": "string",
+      "title": "Type schema.",
+      "description": "An explanation about the purpose of this instance."
+    },
+    "content": {
+      "type": "object",
+      "title": "Content schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "properties": {
+        "parent_id": {
+          "type": "string",
+          "title": "Parent_id schema.",
+          "description": "An explanation about the purpose of this instance."
+        },
+        "url": {
+          "type": "string",
+          "title": "Url schema.",
+          "description": "An explanation about the purpose of this instance."
+        },
+        "id": {
+          "type": "string",
+          "title": "Id schema.",
+          "description": "An explanation about the purpose of this instance."
+        },
+        "plz": {
+          "type": "string",
+          "title": "Plz schema.",
+          "description": "An explanation about the purpose of this instance."
+        },
+        "ebene": {
+          "type": "string",
+          "title": "Ebene schema.",
+          "description": "An explanation about the purpose of this instance."
+        },
+        "ort": {
+          "type": "string",
+          "title": "Ort schema.",
+          "description": "An explanation about the purpose of this instance."
+        },
+        "latitude": {
+          "type": "string",
+          "title": "Latitude schema.",
+          "description": "An explanation about the purpose of this instance."
+        },
+        "number": {
+          "type": "string",
+          "title": "Number schema.",
+          "description": "An explanation about the purpose of this instance."
+        },
+        "longitude": {
+          "type": "string",
+          "title": "Longitude schema.",
+          "description": "An explanation about the purpose of this instance."
+        },
+        "name": {
+          "type": "string",
+          "title": "Name schema.",
+          "description": "An explanation about the purpose of this instance."
+        }
+      }
+      
+    }
+  }
+  
+}
