@@ -2,57 +2,57 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "title": "Root schema.",
-  "description": "An explanation about the purpose of this instance.",
+  "description": "Beschreibung fehlt",
   "properties": {
     "kind": {
       "type": "string",
       "title": "Kind schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "global_id": {
       "type": "string",
       "title": "Global_id schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "name": {
       "type": "string",
       "title": "Name schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "zip": {
       "type": "string",
       "title": "Zip schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "city": {
       "type": "string",
       "title": "City schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "district": {
       "type": "string",
       "title": "District schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "internal_id": {
       "type": "string",
       "title": "Internal_id schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "layer": {
       "type": "string",
       "title": "Layer schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "federal_state": {
       "type": "string",
       "title": "Federal_state schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "country": {
       "type": "string",
       "title": "Country schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     }
   }
 }

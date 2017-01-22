@@ -2,114 +2,114 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "title": "Root schema.",
-  "description": "An explanation about the purpose of this instance.",
+  "description": "Beschreibung fehlt",
   "properties": {
     "kind": {
       "type": "string",
       "title": "Kind schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "id": {
       "type": "string",
       "title": "Id schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "uid": {
       "type": "string",
       "title": "Uid schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "group_id": {
       "type": "string",
       "title": "Group_id schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "title": {
       "type": "string",
       "title": "Title schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "organizer": {
       "type": "string",
       "title": "Organizer schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "target_group": {
       "type": "string",
       "title": "Target_group schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "start_date": {
       "type": "string",
       "title": "Start_date schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "start_time": {
 	  "type": ["string", "null"],
       "title": "Start_time schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "end_date": {
       "type": "string",
       "title": "End_date schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "end_time": {
 	  "type": ["string", "null"],
       "title": "End_time schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "zip": {
       "type": "string",
       "title": "Zip schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "location": {
       "type": "string",
       "title": "Location schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "url_text": {
       "type": "string",
       "title": "Url_text schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "url": {
       "type": "string",
       "title": "Url schema.",
 	  "format": "uri",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "description": {
       "type": "string",
       "title": "Description schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "last_modified_by": {
       "type": "string",
       "title": "Last_modified_by schema.",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "last_modified_on": {
       "type": "string",
       "title": "Last_modified_on schema.",
 	  "format": "date-time",
-      "description": "An explanation about the purpose of this instance."
+      "description": "Beschreibung fehlt"
     },
     "keywords": {
       "type": "object",
       "title": "Keywords schema.",
-      "description": "An explanation about the purpose of this instance.",
+      "description": "Beschreibung fehlt",
       "properties": {
         "kind": {
           "type": "string",
           "title": "Kind schema.",
-          "description": "An explanation about the purpose of this instance."
+          "description": "Beschreibung fehlt"
         },
         "elements": {
           "type": "object",
           "title": "Elements schema.",
-          "description": "An explanation about the purpose of this instance."
+          "description": "Beschreibung fehlt"
         }
       }
     }

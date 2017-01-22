@@ -2,108 +2,108 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "title": "Root schema.",
-  "description": "An explanation about the purpose of this instance.",
+  "description": "Beschreibung fehlt",
   "properties": {
     "events": {
       "type": "object",
       "title": "Events schema.",
-      "description": "An explanation about the purpose of this instance.",
+      "description": "Beschreibung fehlt",
 	  "properties": {
 	    "limit": {
 		  "type":"integer",
 		  "title": "Limit schema.",
-          "description": "An explanation about the purpose of this instance."
+          "description": "Beschreibung fehlt"
 		},
 		"before": {
 		  "type":"string",
 		  "title": "Before schema.",
-          "description": "An explanation about the purpose of this instance."
+          "description": "Beschreibung fehlt"
 		},
 		"beforeDate": {
 		  "type":"string",
 		  "title": "BeforeDate schema.",
-          "description": "An explanation about the purpose of this instance."
+          "description": "Beschreibung fehlt"
 		},
 		"afterDate": {
 		  "type":"string",
 		  "title": "AfterDate schema.",
-          "description": "An explanation about the purpose of this instance."
+          "description": "Beschreibung fehlt"
 		},
 		"uid": {
 		  "type":"string",
 		  "title": "Uid schema.",
-          "description": "An explanation about the purpose of this instance."
+          "description": "Beschreibung fehlt"
 		}
 	  }
     },
     "index": {
       "type": "object",
       "title": "Index schema.",
-      "description": "An explanation about the purpose of this instance.",
+      "description": "Beschreibung fehlt",
 	  "properties": {
 	    "limit": {
 		  "type":"integer",
 		  "title": "Limit schema.",
-          "description": "An explanation about the purpose of this instance."
+          "description": "Beschreibung fehlt"
 		},
 		"deeps": {
 		  "type":"integer",
 		  "title": "Deeps schema.",
-          "description": "An explanation about the purpose of this instance."
+          "description": "Beschreibung fehlt"
 		},
 		"uid": {
 		  "type":"string",
 		  "title": "Uid schema.",
-          "description": "An explanation about the purpose of this instance."
+          "description": "Beschreibung fehlt"
 		}
 	  }
     },
     "event_ids": {
       "type": "object",
       "title": "Event_ids schema.",
-      "description": "An explanation about the purpose of this instance.",
+      "description": "Beschreibung fehlt",
 	  "properties": {
 	    "limit": {
 		  "type":"integer",
 		  "title": "Limit schema.",
-          "description": "An explanation about the purpose of this instance."
+          "description": "Beschreibung fehlt"
 		},
 		"before": {
 		  "type":"string",
 		  "title": "Before schema.",
-          "description": "An explanation about the purpose of this instance."
+          "description": "Beschreibung fehlt"
 		},
 		"beforeDate": {
 		  "type":"string",
 		  "title": "BeforeDate schema.",
-          "description": "An explanation about the purpose of this instance."
+          "description": "Beschreibung fehlt"
 		},
 		"afterDate": {
 		  "type":"string",
 		  "title": "AfterDate schema.",
-          "description": "An explanation about the purpose of this instance."
+          "description": "Beschreibung fehlt"
 		},
 		"uid": {
 		  "type":"string",
 		  "title": "Uid schema.",
-          "description": "An explanation about the purpose of this instance."
+          "description": "Beschreibung fehlt"
 		}
 	  }
     },
     "kalenders": {
       "type": "object",
       "title": "Kalenders schema.",
-      "description": "An explanation about the purpose of this instance.",
+      "description": "Beschreibung fehlt",
 	  "properties": {
 	    "limit": {
 		  "type":"integer",
 		  "title": "Limit schema.",
-          "description": "An explanation about the purpose of this instance."
+          "description": "Beschreibung fehlt"
 		},
 		"uid": {
 		  "type":"string",
 		  "title": "Uid schema.",
-          "description": "An explanation about the purpose of this instance."
+          "description": "Beschreibung fehlt"
 		}
 	  }
     }
