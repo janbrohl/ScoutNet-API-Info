@@ -14,6 +14,6 @@ Was Du hier etwas noch nicht findest, steht vielleicht in der offiziellen Doku a
    api
    schemas
    pfadiql
-   code
+   examples
    
  

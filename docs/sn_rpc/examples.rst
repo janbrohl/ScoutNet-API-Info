@@ -1,6 +1,6 @@
-.. _sn_rpc_code:
+.. _sn_rpc_examples:
 
-Beispielcode
+Beispiele
 =============
 	
 Teilweise getestet mit :term:`Python` 3.5, benötigt :term:`requests` und :term:`pycrypto`
@@ -8,6 +8,8 @@ Teilweise getestet mit :term:`Python` 3.5, benötigt :term:`requests` und :term:
 
 Beispielbenutzung
 ------------------
+
+Aufrufe der Funktionen von :ref:`sn_rpc_py`
 
 .. testsetup:: sn_rpc
 

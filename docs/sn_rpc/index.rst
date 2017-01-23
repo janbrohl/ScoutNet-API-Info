@@ -12,5 +12,5 @@ Falls Du hier etwas noch nicht findest kannst du in den Quälcode des offizielle
    
    api
    schemas
-   code
+   examples
    

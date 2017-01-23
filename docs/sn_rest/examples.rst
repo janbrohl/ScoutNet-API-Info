@@ -1,6 +1,6 @@
-.. _sn_rest_code:
+.. _sn_rest_examples:
 
-Beispielcode
+Beispiele
 =============
 
 Getestet mit :term:`Python` 3.5, benötigt :term:`requests`
@@ -8,6 +8,8 @@ Getestet mit :term:`Python` 3.5, benötigt :term:`requests`
    
 Beispielbenutzung
 ------------------
+
+Aufrufe der Funktionen von :ref:`sn_rest_py`
 
 .. testsetup:: sn_rest
 
