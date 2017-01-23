@@ -12,7 +12,7 @@ for fn in glob.iglob("schemas/*/*.json"):
 for fn in glob.iglob("docs/**/*.rst"):
     with open(fn,encoding="utf8") as f:
         lines=[l.rstrip().replace("\t","    ") for l in f]
-    with open(fn,"w",encoding="utf8") as f:
+    with open(fn,"w",encoding="utf8",newline="") as f:
         for l in lines:
             f.write(l)
             f.write("\n")
