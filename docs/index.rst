@@ -3,8 +3,8 @@ Info zu den ScoutNet.de APIs
 
 Es gib im Grunde genommen 2 APIs:
 
-* den Webservice der laut Doku_ "RPC_ im REST_-Stil mit JSON_ als Datenaustauschformat implementiert" - im weiteren Text **SN-REST** genannt
-* den anderen Webservice den man per JSON-RPC_ (1.0) über HTTP(S) POST ansprechen kann - im weiteren Text **SN-RPC** genannt
+* den Webservice der laut Doku_ ":term:`RPC` im :term:`REST`-Stil mit :term:`JSON` als Datenaustauschformat implementiert" - im weiteren Text **SN-REST** genannt
+* den anderen Webservice den man per :term:`JSON-RPC` (1.0) über HTTP(S) POST ansprechen kann - im weiteren Text **SN-RPC** genannt
 
 
 Objekte in den Antworten der APIs enthalten Typhinweise: Bei SN-REST unter dem Namen ``"kind"`` bei SN-RPC unter ``"type"``.
@@ -14,7 +14,7 @@ Objekte in den Antworten der APIs enthalten Typhinweise: Bei SN-REST unter dem N
 Codebeispiele
 ---------------
 
-Getestet mit Python_ 3.5 und requests_ 2.12. 
+Getestet mit :term:`Python` 3.5 und :term:`requests` 2.12. 
 
 .. literalinclude:: ../sn_clients.py
    :language: python
@@ -48,19 +48,8 @@ Getestet mit Python_ 3.5 und requests_ 2.12.
    
    sn_rpc/index
    sn_rest/index
-
-.. _RPC: https://en.wikipedia.org/wiki/Remote_procedure_call
-
-.. _REST: https://en.wikipedia.org/wiki/Representational_state_transfer
-
-.. _JSON: https://en.wikipedia.org/wiki/JSON
-
-.. _JSON-RPC: https://en.wikipedia.org/wiki/JSON-RPC
+   glossary
 
 .. _Doku: https://www.scoutnet.de/api-info/webservice.html
-
-.. _requests: http://docs.python-requests.org/en/master/
-
-.. _Python: https://www.python.org/
 
 

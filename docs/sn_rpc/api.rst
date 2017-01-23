@@ -68,5 +68,5 @@ Die Doku zu den Funktionen ist fast direkt kopiert aus dem Server-Code.
 	
 
 	
-Die Erzeugung des Auth-Strings ist etwas kompliziert aber sie sollte funktionieren wie im :ref:`code`
+Die Erzeugung des Auth-Strings ist etwas kompliziert aber sie sollte funktionieren wie im :ref:`sn_rpc_code`
 
