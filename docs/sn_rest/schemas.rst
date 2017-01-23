@@ -61,3 +61,4 @@ Original: :download:`JSON-Schema <../../schemas/sn_rest/collection.json>`
 Lesbarer:
 
 .. jsonschema:: ../../schemas/sn_rest/collection.json
+

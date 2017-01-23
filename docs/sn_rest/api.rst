@@ -3,7 +3,7 @@
 API
 =========
 
-   
+
 Gruppen
 --------
 
@@ -45,7 +45,7 @@ Gruppen
     Direkt übergeordnete Gruppe (:ref:`sn_rest_group`) zu einer Gruppe abrufen.
 
     :param group_id: ID der Gruppe
-    
+
 .. http:get:: https://www.scoutnet.de/api/0.2/group/(group_id)/parent/(layer)/
 
     Übergeordnete Gruppe (:ref:`sn_rest_group`) zu einer Gruppe abrufen.
@@ -56,12 +56,12 @@ Gruppen
 .. http:get:: https://www.scoutnet.de/api/0.2/group/(group_id)/parents/
 
     Sammlung (:ref:`sn_rest_collection`) übergeordneter Gruppen (:ref:`sn_rest_group`) zu einer Gruppe abrufen.
-    
+
     .. todo:: was bedeutet der options-parameter?
 
     :param group_id: ID der Gruppe
-    
-    
+
+
 
 .. http:get:: https://www.scoutnet.de/api/0.2/group/(group_id)/urls/
 
@@ -150,3 +150,4 @@ Stufen
     Stufe (:ref:`sn_rest_section`) abrufen.
 
     :param section_id: ID der Stufe
+

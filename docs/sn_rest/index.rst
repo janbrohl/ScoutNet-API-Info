@@ -9,11 +9,11 @@ Was Du hier etwas noch nicht findest, steht vielleicht in der offiziellen Doku a
 .. toctree::
    :caption: Inhalt
    :maxdepth: 2
-   
-   
+
+
    api
    schemas
    pfadiql
    examples
-   
- 
+
+

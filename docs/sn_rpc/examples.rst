@@ -2,7 +2,7 @@
 
 Beispiele
 =============
-	
+
 Teilweise getestet mit :term:`Python` 3.5, benötigt :term:`requests` und :term:`pycrypto`
 
 
@@ -19,32 +19,32 @@ Events für Gruppe 4 abfragen:
 
 .. testcode:: sn_rpc
 
-	get_data_by_global_id("4",{"events":{}})
-	
+    get_data_by_global_id("4",{"events":{}})
+
 Events für Gruppe 4 und 3 abfragen:
 
 .. testcode:: sn_rpc
 
-	get_data_by_global_id(["4","3"],{"events":{}})
-	
+    get_data_by_global_id(["4","3"],{"events":{}})
+
 Events für Gruppe 4 abfragen die vor dem 12.01.2012 liegen:
 
 .. testcode:: sn_rpc
 
-	get_data_by_global_id("4",{"events":{"before":"12.01.2012"}})
+    get_data_by_global_id("4",{"events":{"before":"12.01.2012"}})
 
 Info über Gruppe 4 abfragen:
 
 .. testcode:: sn_rpc
 
-	get_data_by_global_id("4",{"index":{}})
-	
+    get_data_by_global_id("4",{"index":{}})
+
 Übergeordnete Gruppe zu  Gruppe 4 suchen:
 
 .. testcode:: sn_rpc
 
-	get_data_by_global_id("4",{"index":{}})
-	
+    get_data_by_global_id("4",{"index":{}})
+
 Beispielclient
 --------------
 
@@ -53,3 +53,4 @@ Beispielclient
    :linenos:
    :caption: sn_rpc.py
    :name: sn_rpc_py
+
