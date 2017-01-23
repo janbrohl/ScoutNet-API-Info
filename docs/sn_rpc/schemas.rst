@@ -1,6 +1,6 @@
 .. _sn_rpc_schemas:
 
-JSON-Schemas zu SN-RPC
+JSON-Schemas
 ========================
 
 .. _sn_rpc_query:
