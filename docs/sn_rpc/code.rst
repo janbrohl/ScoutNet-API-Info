@@ -9,23 +9,37 @@ Teilweise getestet mit :term:`Python` 3.5, benötigt :term:`requests` und :term:
 Beispielbenutzung
 ------------------
 
-Events für Gruppe 4 abfragen::
+.. testsetup:: sn_rpc
+
+    from sn_rpc import *
+
+Events für Gruppe 4 abfragen:
+
+.. testcode:: sn_rpc
 
 	get_data_by_global_id("4",{"events":{}})
 	
-Events für Gruppe 4 und 3 abfragen::
+Events für Gruppe 4 und 3 abfragen:
+
+.. testcode:: sn_rpc
 
 	get_data_by_global_id(["4","3"],{"events":{}})
 	
-Events für Gruppe 4 abfragen die vor dem 12.01.2012 liegen::
+Events für Gruppe 4 abfragen die vor dem 12.01.2012 liegen:
 
-	get_data_by_global_id("4",{"events":{"before":"12.01.2012"})
+.. testcode:: sn_rpc
 
-Info über Gruppe 4 abfragen::
+	get_data_by_global_id("4",{"events":{"before":"12.01.2012"}})
+
+Info über Gruppe 4 abfragen:
+
+.. testcode:: sn_rpc
 
 	get_data_by_global_id("4",{"index":{}})
 	
-Übergeordnete Gruppe zu  Gruppe 4 suchen::
+Übergeordnete Gruppe zu  Gruppe 4 suchen:
+
+.. testcode:: sn_rpc
 
 	get_data_by_global_id("4",{"index":{}})
 	

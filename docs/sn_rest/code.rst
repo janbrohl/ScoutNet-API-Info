@@ -9,23 +9,37 @@ Getestet mit :term:`Python` 3.5, benötigt :term:`requests`
 Beispielbenutzung
 ------------------
 
-Events für Gruppe 4 abfragen::
+.. testsetup:: sn_rest
+
+    from sn_rest import *
+
+Events für Gruppe 4 abfragen:
+
+.. testcode:: sn_rest
 
 	sn_rest("group/4/events/")
 	
-Events für Gruppe 4 und 3 abfragen::
+Events für Gruppe 4 und 3 abfragen:
+
+.. testcode:: sn_rest
 
 	sn_rest("/events/","group_id=? or group_id=?",["4","3"])
 	
-Events für Gruppe 4 abfragen die vor dem 12.01.2012 liegen::
+Events für Gruppe 4 abfragen die vor dem 12.01.2012 liegen:
+
+.. testcode:: sn_rest
 
 	sn_rest("group/4/events/", "end_date < ?",["2012-01-12"])
 
-Info über Gruppe 4 abfragen::
+Info über Gruppe 4 abfragen:
+
+.. testcode:: sn_rest
 
 	sn_rest("group/4/")
 	
-Übergeordnete Gruppe zu  Gruppe 4 suchen::
+Übergeordnete Gruppe zu  Gruppe 4 suchen:
+
+.. testcode:: sn_rest
 
 	sn_rest("group/4/parent/")
 	
