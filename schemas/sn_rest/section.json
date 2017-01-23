@@ -1,38 +1,41 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "title": "5 schema.",
-  "description": "Beschreibung fehlt",
-  "properties": {
-    "kind": {
-      "type": "string",
-      "title": "Kind schema.",
-      "description": "Beschreibung fehlt"
-    },
-    "id": {
-      "type": "string",
-      "title": "Id schema.",
-      "description": "Beschreibung fehlt"
-    },
-    "name": {
-      "type": "string",
-      "title": "Name schema.",
-      "description": "Beschreibung fehlt"
-    },
-    "start_age": {
-      "type": "string",
-      "title": "Start_age schema.",
-      "description": "Beschreibung fehlt"
-    },
-    "end_age": {
-      "type": "string",
-      "title": "End_age schema.",
-      "description": "Beschreibung fehlt"
-    },
-    "color": {
-      "type": "string",
-      "title": "Color schema.",
-      "description": "Beschreibung fehlt"
-    }
+ "$schema": "http://json-schema.org/draft-04/schema#",
+ "description": "Beschreibung fehlt",
+ "properties": {
+  "color": {
+   "description": "Beschreibung fehlt",
+   "title": "Color schema.",
+   "type": "string"
+  },
+  "end_age": {
+   "description": "Beschreibung fehlt",
+   "title": "End_age schema.",
+   "type": "string"
+  },
+  "id": {
+   "description": "Beschreibung fehlt",
+   "title": "Id schema.",
+   "type": "string"
+  },
+  "kind": {
+   "description": "Beschreibung fehlt",
+   "enum": [
+    "section"
+   ],
+   "title": "Kind schema.",
+   "type": "string"
+  },
+  "name": {
+   "description": "Beschreibung fehlt",
+   "title": "Name schema.",
+   "type": "string"
+  },
+  "start_age": {
+   "description": "Beschreibung fehlt",
+   "title": "Start_age schema.",
+   "type": "string"
   }
+ },
+ "title": "5 schema.",
+ "type": "object"
 }

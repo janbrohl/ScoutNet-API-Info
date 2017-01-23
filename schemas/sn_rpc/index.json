@@ -1,72 +1,73 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "title": "Root schema.",
-  "description": "Beschreibung fehlt",
-  "properties": {
-    "type": {
-      "type": "string",
-      "title": "Type schema.",
-      "description": "Beschreibung fehlt"
+ "$schema": "http://json-schema.org/draft-04/schema#",
+ "description": "Beschreibung fehlt",
+ "properties": {
+  "content": {
+   "description": "Beschreibung fehlt",
+   "properties": {
+    "ebene": {
+     "description": "Beschreibung fehlt",
+     "title": "Ebene schema.",
+     "type": "string"
     },
-    "content": {
-      "type": "object",
-      "title": "Content schema.",
-      "description": "Beschreibung fehlt",
-      "properties": {
-        "parent_id": {
-          "type": "string",
-          "title": "Parent_id schema.",
-          "description": "Beschreibung fehlt"
-        },
-        "url": {
-          "type": "string",
-          "title": "Url schema.",
-          "description": "Beschreibung fehlt"
-        },
-        "id": {
-          "type": "string",
-          "title": "Id schema.",
-          "description": "Beschreibung fehlt"
-        },
-        "plz": {
-          "type": "string",
-          "title": "Plz schema.",
-          "description": "Beschreibung fehlt"
-        },
-        "ebene": {
-          "type": "string",
-          "title": "Ebene schema.",
-          "description": "Beschreibung fehlt"
-        },
-        "ort": {
-          "type": "string",
-          "title": "Ort schema.",
-          "description": "Beschreibung fehlt"
-        },
-        "latitude": {
-          "type": "string",
-          "title": "Latitude schema.",
-          "description": "Beschreibung fehlt"
-        },
-        "number": {
-          "type": "string",
-          "title": "Number schema.",
-          "description": "Beschreibung fehlt"
-        },
-        "longitude": {
-          "type": "string",
-          "title": "Longitude schema.",
-          "description": "Beschreibung fehlt"
-        },
-        "name": {
-          "type": "string",
-          "title": "Name schema.",
-          "description": "Beschreibung fehlt"
-        }
-      }
-      
+    "id": {
+     "description": "Beschreibung fehlt",
+     "title": "Id schema.",
+     "type": "string"
+    },
+    "latitude": {
+     "description": "Beschreibung fehlt",
+     "title": "Latitude schema.",
+     "type": "string"
+    },
+    "longitude": {
+     "description": "Beschreibung fehlt",
+     "title": "Longitude schema.",
+     "type": "string"
+    },
+    "name": {
+     "description": "Beschreibung fehlt",
+     "title": "Name schema.",
+     "type": "string"
+    },
+    "number": {
+     "description": "Beschreibung fehlt",
+     "title": "Number schema.",
+     "type": "string"
+    },
+    "ort": {
+     "description": "Beschreibung fehlt",
+     "title": "Ort schema.",
+     "type": "string"
+    },
+    "parent_id": {
+     "description": "Beschreibung fehlt",
+     "title": "Parent_id schema.",
+     "type": "string"
+    },
+    "plz": {
+     "description": "Beschreibung fehlt",
+     "title": "Plz schema.",
+     "type": "string"
+    },
+    "url": {
+     "description": "Beschreibung fehlt",
+     "title": "Url schema.",
+     "type": "string"
     }
+   },
+   "title": "Content schema.",
+   "type": "object"
+  },
+  "type": {
+   "description": "Beschreibung fehlt",
+   "enum": [
+    "index"
+   ],
+   "title": "Type schema.",
+   "type": "string"
   }
-  
+ },
+ "title": "Root schema.",
+ "type": "object"
 }

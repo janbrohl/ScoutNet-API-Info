@@ -1,58 +1,61 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "title": "Root schema.",
-  "description": "Beschreibung fehlt",
-  "properties": {
-    "kind": {
-      "type": "string",
-      "title": "Kind schema.",
-      "description": "Beschreibung fehlt"
-    },
-    "global_id": {
-      "type": "string",
-      "title": "Global_id schema.",
-      "description": "Beschreibung fehlt"
-    },
-    "name": {
-      "type": "string",
-      "title": "Name schema.",
-      "description": "Beschreibung fehlt"
-    },
-    "zip": {
-      "type": "string",
-      "title": "Zip schema.",
-      "description": "Beschreibung fehlt"
-    },
-    "city": {
-      "type": "string",
-      "title": "City schema.",
-      "description": "Beschreibung fehlt"
-    },
-    "district": {
-      "type": "string",
-      "title": "District schema.",
-      "description": "Beschreibung fehlt"
-    },
-    "internal_id": {
-      "type": "string",
-      "title": "Internal_id schema.",
-      "description": "Beschreibung fehlt"
-    },
-    "layer": {
-      "type": "string",
-      "title": "Layer schema.",
-      "description": "Beschreibung fehlt"
-    },
-    "federal_state": {
-      "type": "string",
-      "title": "Federal_state schema.",
-      "description": "Beschreibung fehlt"
-    },
-    "country": {
-      "type": "string",
-      "title": "Country schema.",
-      "description": "Beschreibung fehlt"
-    }
+ "$schema": "http://json-schema.org/draft-04/schema#",
+ "description": "Beschreibung fehlt",
+ "properties": {
+  "city": {
+   "description": "Beschreibung fehlt",
+   "title": "City schema.",
+   "type": "string"
+  },
+  "country": {
+   "description": "Beschreibung fehlt",
+   "title": "Country schema.",
+   "type": "string"
+  },
+  "district": {
+   "description": "Beschreibung fehlt",
+   "title": "District schema.",
+   "type": "string"
+  },
+  "federal_state": {
+   "description": "Beschreibung fehlt",
+   "title": "Federal_state schema.",
+   "type": "string"
+  },
+  "global_id": {
+   "description": "Beschreibung fehlt",
+   "title": "Global_id schema.",
+   "type": "string"
+  },
+  "internal_id": {
+   "description": "Beschreibung fehlt",
+   "title": "Internal_id schema.",
+   "type": "string"
+  },
+  "kind": {
+   "description": "Beschreibung fehlt",
+   "enum": [
+    "group"
+   ],
+   "title": "Kind schema.",
+   "type": "string"
+  },
+  "layer": {
+   "description": "Beschreibung fehlt",
+   "title": "Layer schema.",
+   "type": "string"
+  },
+  "name": {
+   "description": "Beschreibung fehlt",
+   "title": "Name schema.",
+   "type": "string"
+  },
+  "zip": {
+   "description": "Beschreibung fehlt",
+   "title": "Zip schema.",
+   "type": "string"
   }
+ },
+ "title": "Root schema.",
+ "type": "object"
 }

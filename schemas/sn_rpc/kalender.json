@@ -1,65 +1,63 @@
 {
-	"$schema": "http://json-schema.org/draft-04/schema#",
-	"type": "object",
-	"title": "Root schema.",
-	"description": "Beschreibung fehlt",
-	"properties": {
-		"type": {
-			"type": "string",
-			"title": "Type schema.",
-			"description": "Beschreibung fehlt"
-		},
-		"content": {
-			"type": "object",
-			"title": "Content schema.",
-			"description": "Beschreibung fehlt",
-			"properties": {
-				"Verband": {
-					"type": "string",
-					"title": "Verband schema.",
-					"description": "Beschreibung fehlt"
-				},
-				"Ebene": {
-					"type": "string",
-					"title": "Ebene schema.",
-					"description": "Beschreibung fehlt"
-				},
-				"Ident": {
-					"type": "string",
-					"title": "Ident schema.",
-					"description": "Beschreibung fehlt"
-				},
-				"Forced_Kategories": {
-					"type": "object",
-					"title": "Forced_Kategories schema.",
-					"description": "Beschreibung fehlt"
-
-
-				},
-				"ID": {
-					"type": "string",
-					"title": "ID schema.",
-					"description": "Beschreibung fehlt"
-				},
-				"Name": {
-					"type": "string",
-					"title": "Name schema.",
-					"description": "Beschreibung fehlt"
-				},
-				"Used_Kategories": {
-					"type": "object",
-					"title": "Used_Kategories schema.",
-					"description": "Beschreibung fehlt"
-				},
-				"Ebene_Id": {
-					"type": "integer",
-					"title": "Ebene_Id schema.",
-					"description": "Beschreibung fehlt"
-				}
-			}
-
-		}
-	}
-
-
+ "$schema": "http://json-schema.org/draft-04/schema#",
+ "description": "Beschreibung fehlt",
+ "properties": {
+  "content": {
+   "description": "Beschreibung fehlt",
+   "properties": {
+    "Ebene": {
+     "description": "Beschreibung fehlt",
+     "title": "Ebene schema.",
+     "type": "string"
+    },
+    "Ebene_Id": {
+     "description": "Beschreibung fehlt",
+     "title": "Ebene_Id schema.",
+     "type": "integer"
+    },
+    "Forced_Kategories": {
+     "description": "Beschreibung fehlt",
+     "title": "Forced_Kategories schema.",
+     "type": "object"
+    },
+    "ID": {
+     "description": "Beschreibung fehlt",
+     "title": "ID schema.",
+     "type": "string"
+    },
+    "Ident": {
+     "description": "Beschreibung fehlt",
+     "title": "Ident schema.",
+     "type": "string"
+    },
+    "Name": {
+     "description": "Beschreibung fehlt",
+     "title": "Name schema.",
+     "type": "string"
+    },
+    "Used_Kategories": {
+     "description": "Beschreibung fehlt",
+     "title": "Used_Kategories schema.",
+     "type": "object"
+    },
+    "Verband": {
+     "description": "Beschreibung fehlt",
+     "title": "Verband schema.",
+     "type": "string"
+    }
+   },
+   "title": "Content schema.",
+   "type": "object"
+  },
+  "type": {
+   "description": "Beschreibung fehlt",
+   "enum": [
+    "kalender"
+   ],
+   "title": "Type schema.",
+   "type": "string"
+  }
+ },
+ "title": "Root schema.",
+ "type": "object"
 }

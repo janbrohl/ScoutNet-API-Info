@@ -1,34 +1,37 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "title": "Root schema.",
-  "description": "Beschreibung fehlt",
-  "properties": {
-    "kind": {
-      "type": "string",
-      "title": "Kind schema.",
-      "description": "Beschreibung fehlt"
-    },
-    "id": {
-      "type": "string",
-      "title": "Id schema.",
-      "description": "Beschreibung fehlt"
-    },
-    "group_id": {
-      "type": "string",
-      "title": "Group_id schema.",
-      "description": "Beschreibung fehlt"
-    },
-    "url": {
-      "type": "string",
-      "title": "Url schema.",
-	  "format": "uri",
-      "description": "Beschreibung fehlt"
-    },
-    "text": {
-      "type": "string",
-      "title": "Text schema.",
-      "description": "Beschreibung fehlt"
-    }
+ "$schema": "http://json-schema.org/draft-04/schema#",
+ "description": "Beschreibung fehlt",
+ "properties": {
+  "group_id": {
+   "description": "Beschreibung fehlt",
+   "title": "Group_id schema.",
+   "type": "string"
+  },
+  "id": {
+   "description": "Beschreibung fehlt",
+   "title": "Id schema.",
+   "type": "string"
+  },
+  "kind": {
+   "description": "Beschreibung fehlt",
+   "enum": [
+    "url"
+   ],
+   "title": "Kind schema.",
+   "type": "string"
+  },
+  "text": {
+   "description": "Beschreibung fehlt",
+   "title": "Text schema.",
+   "type": "string"
+  },
+  "url": {
+   "description": "Beschreibung fehlt",
+   "format": "uri",
+   "title": "Url schema.",
+   "type": "string"
   }
+ },
+ "title": "Root schema.",
+ "type": "object"
 }
