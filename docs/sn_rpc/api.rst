@@ -1,7 +1,8 @@
-.. sn_rpc:
+.. sn_rpc_api:
 
-SN-RPC
+API
 ======================
+   
 
 Alle Aufrufe gehen per JSON-RPC (1.0) per HTTP-POST an die selbe URL:
 
@@ -67,9 +68,5 @@ Die Doku zu den Funktionen ist fast direkt kopiert aus dem Server-Code.
 	
 
 	
-Die Erzeugung des Auth-Strings ist etwas kompliziert aber sie sollte funktionieren wie in der folgenden Beispielimplementierung:
-
-.. literalinclude:: ../sn_rpc.py
-   :language: python
-   :linenos:
+Die Erzeugung des Auth-Strings ist etwas kompliziert aber sie sollte funktionieren wie im :ref:`code`
 

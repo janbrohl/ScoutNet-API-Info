@@ -1,11 +1,9 @@
-.. _sn_rest:
+.. _sn_rest_api:
 
-SN-REST
-========================
+API
+=========
 
-Noch gibt es hier nicht so viel zu sehen aber es gibt schon eine Doku auf https://www.scoutnet.de/api-info/webservice.html
-
-
+   
 Gruppen
 --------
 
@@ -152,4 +150,3 @@ Stufen
     Stufe (:ref:`sn_rest_section`) abrufen.
 
     :param section_id: ID der Stufe
-	

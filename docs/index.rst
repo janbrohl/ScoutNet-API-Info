@@ -40,17 +40,14 @@ Getestet mit Python_ 3.5 und requests_ 2.12.
 | suchen                             |                                                               |                                                       |
 +------------------------------------+---------------------------------------------------------------+-------------------------------------------------------+
 
-Inhalt
-----------
 
 .. toctree::
-   :maxdepth: 2
+   :caption: Inhalt
+   :maxdepth: 3
    
    
-   sn_rpc
-   sn_rpc_schemas
-   sn_rest
-   sn_rest_schemas
+   sn_rpc/index
+   sn_rest/index
 
 .. _RPC: https://en.wikipedia.org/wiki/Remote_procedure_call
 
