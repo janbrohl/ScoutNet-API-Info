@@ -1,7 +1,9 @@
 .. _sn_rest_schemas:
 
-JSON-Schemas
+Schemas
 ========================
+
+Hier sind :term:`JSON-Schemas <json-schema>` zu :term:`SN-REST`
 
 Noch ist das nur alles automatisch erzeugt und gibt nur eine Übersicht welche felder es überhaupt gibt.
 
@@ -10,7 +12,7 @@ Noch ist das nur alles automatisch erzeugt und gibt nur eine Übersicht welche f
 Event
 ------
 
-Original: :download:`download <../../schemas/sn_rest/event.json>`
+Original: :download:`JSON-Schema <../../schemas/sn_rest/event.json>`
 
 Lesbarer:
 
@@ -21,7 +23,7 @@ Lesbarer:
 URL
 ----
 
-Original: :download:`download <../../schemas/sn_rest/url.json>`
+Original: :download:`JSON-Schema <../../schemas/sn_rest/url.json>`
 
 Lesbarer:
 
@@ -32,7 +34,7 @@ Lesbarer:
 Section
 --------
 
-Original: :download:`download <../../schemas/sn_rest/section.json>`
+Original: :download:`JSON-Schema <../../schemas/sn_rest/section.json>`
 
 Lesbarer:
 
@@ -43,7 +45,7 @@ Lesbarer:
 Group
 ------
 
-Original: :download:`download <../../schemas/sn_rest/group.json>`
+Original: :download:`JSON-Schema <../../schemas/sn_rest/group.json>`
 
 Lesbarer:
 
@@ -54,7 +56,7 @@ Lesbarer:
 Collection
 -----------
 
-Original: :download:`download <../../schemas/sn_rest/collection.json>`
+Original: :download:`JSON-Schema <../../schemas/sn_rest/collection.json>`
 
 Lesbarer:
 

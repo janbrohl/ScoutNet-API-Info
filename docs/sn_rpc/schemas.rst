@@ -1,8 +1,9 @@
 .. _sn_rpc_schemas:
 
-JSON-Schemas
+Schemas
 ========================
 
+Hier sind :term:`JSON-Schemas <json-schema>` zu :term:`SN-RPC`
 
 .. _sn_rpc_query:
 
@@ -11,7 +12,7 @@ Query
 
 Bisher ist dies weitgehend spekulativ.
 
-Original: :download:`download <../../schemas/sn_rpc/query.json>`
+Original: :download:`JSON-Schema <../../schemas/sn_rpc/query.json>`
 
 Lesbarer:
 
@@ -30,7 +31,7 @@ Typen für die Attribute des Antwortobjekts von :js:func:`get_data_by_global_id`
 Event
 ~~~~~~~~~~~
 
-Original: :download:`download <../../schemas/sn_rpc/event.json>`
+Original: :download:`JSON-Schema <../../schemas/sn_rpc/event.json>`
 
 Lesbarer:
 
@@ -41,7 +42,7 @@ Lesbarer:
 Kalender
 ~~~~~~~~~~
 
-Original: :download:`download <../../schemas/sn_rpc/kalender.json>`
+Original: :download:`JSON-Schema <../../schemas/sn_rpc/kalender.json>`
 
 Lesbarer:
 
@@ -52,7 +53,7 @@ Lesbarer:
 Index
 ~~~~~~~~~~~
 
-Original: :download:`download <../../schemas/sn_rpc/index.json>`
+Original: :download:`JSON-Schema <../../schemas/sn_rpc/index.json>`
 
 Lesbarer:
 
