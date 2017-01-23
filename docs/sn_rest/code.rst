@@ -1,6 +1,6 @@
 .. _sn_rest_code:
 
-Beispielecode
+Beispielcode
 =============
 
 Getestet mit :term:`Python` 3.5, benötigt :term:`requests`
