@@ -69,7 +69,7 @@ Gruppen
 
     :param group_id: ID der Gruppe
 
-.. http:get:: https://www.scoutnet.de/api/0.2/group/(group_id)/urls/
+.. http:get:: https://www.scoutnet.de/api/0.2/group/(group_id)/sections/
 
     Sammlung (:ref:`sn_rest_collection`) von Stufen (:ref:`sn_rest_section`) zu einer Gruppe abrufen.
 
