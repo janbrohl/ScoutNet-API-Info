@@ -1,6 +1,4 @@
 sphinx
 sphinxcontrib-httpdomain
-# sphinxcontrib-jsonschema
-#https://github.com/janbrohl/sphinxcontrib-jsonschema/archive/master.zip
-https://github.com/tk0miya/sphinxcontrib-jsonschema/archive/bae8067491214a8c267e27c64877380463c88493.zip
+sphinxcontrib-jsonschema
 sphinx_rtd_theme
