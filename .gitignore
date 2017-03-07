@@ -4,3 +4,4 @@ deactivate_env.bat
 env/*
 docs/_build/*
 *.pyc
+.vscode/*
