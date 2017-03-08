@@ -3,7 +3,7 @@
 Beispiele
 =============
 
-Getestet mit :term:`Python` 3.5, benötigt :term:`requests`
+Getestet mit :term:`Python` 3.5, benötigt :term:`Bibliothek requests`
 
 
 Beispielbenutzung

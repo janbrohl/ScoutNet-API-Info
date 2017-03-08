@@ -3,7 +3,7 @@
 Beispiele
 =============
 
-Teilweise getestet mit :term:`Python` 3.5, benötigt :term:`requests` und :term:`pycrypto`
+Teilweise getestet mit :term:`Python` 3.5, benötigt :term:`Bibliothek requests` und :term:`Bibliothek pycrypto`
 
 
 Beispielbenutzung

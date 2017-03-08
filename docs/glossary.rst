@@ -19,16 +19,7 @@ Glossar
        Ist bei der Standardinstallation von Python inzwischen dabei 
        aber kann auch direkt von https://pypi.python.org/pypi/pip geladen werden.
 
-    requests
-       Requests ist eine Python-Bibliothek für einfache Benutzung von HTTP(S).
-       
-       Kann man mit :term:`pip` laden oder direkt von https://pypi.python.org/pypi/requests
     
-    
-    pycrypto
-       Pycrypto ist eine Python-Bibliothek mit kryptografischen Funktionen.
-       
-       Kann man mit :term:`pip` laden oder direkt von https://pypi.python.org/pypi/pycrypto
        
     
     rpc
@@ -54,6 +45,11 @@ Glossar
        
        https://en.wikipedia.org/wiki/JSON-RPC
 
+    icalendar
+        iCalendar ist ein Dateiformat zum Austausch non Kalenderdaten.
+
+        https://de.wikipedia.org/wiki/ICalendar
+
     caldav
         CalDAV (Calender Distributed Authoring and Versioning) ist ein Protokoll zum Bearbeiten und Abgleichen von Kalendern.
 
@@ -75,7 +71,25 @@ Glossar
         SN-CalDAV bezeihnet hier den Webservice den man per modifiziertem :term:`CalDAV` (+:term:`JSON`) ansprechen kann. 
 
        
+    bibliothek requests
+       Requests ist eine Python-Bibliothek für einfache Benutzung von HTTP(S).
        
+       Kann man mit :term:`pip` laden oder direkt von https://pypi.python.org/pypi/requests
+
+    bibliothek icalendar
+        iCalendar ist eine Python-Bibliothek zum Arbeiten mit :term:`iCalendar`-Datenstrukturen.
+
+        Kann man mit :term:`pip` laden oder direkt von https://pypi.python.org/pypi/icalendar
+
+    bibliothek caldav
+        Caldav ist eine Python-Bibliothek zum Bearbeiten von :term:`CalDAV`-Kalendern.
+
+        Kann man mit :term:`pip` laden oder direkt von https://pypi.python.org/pypi/caldav
+    
+    bibliothek pycrypto
+       Pycrypto ist eine Python-Bibliothek mit kryptografischen Funktionen.
+       
+       Kann man mit :term:`pip` laden oder direkt von https://pypi.python.org/pypi/pycrypto
        
 .. _Doku: https://www.scoutnet.de/api-info/webservice.html
 
