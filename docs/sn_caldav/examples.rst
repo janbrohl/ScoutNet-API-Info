@@ -5,14 +5,13 @@ Beispiele
 
 Getestet mit :term:`Python` 3.5, benötigt :term:`Bibliothek iCalendar` und :term:`Bibliothek caldav`
 
-.. code-block:: python
-
-    from sn_caldav import *
+Demo für :ref:`sn_caldav_py`
 
 
 .. literalinclude:: ../../sn_caldav.py
    :language: python
    :dedent: 4
+   :linenos:
    :start-after: "__main__":
 
 
