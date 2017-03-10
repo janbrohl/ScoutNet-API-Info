@@ -5,8 +5,8 @@ Beispiele
 
 Ausprobiert mit :term:`Python` 3.5, benötigt :term:`Bibliothek iCalendar` und :term:`Bibliothek caldav`
 
-Funktioniert aber leider nur in sehr einfachen Fällen - Sonderzeichen im :term:`JSON`-String im Description-Feld machen Probleme. 
-Über Korrekturvorschläge würde ich mich freuen. 
+Funktioniert aber leider nur in sehr einfachen Fällen - Sonderzeichen im :term:`JSON`-String im Description-Feld machen Probleme.
+Über Korrekturvorschläge würde ich mich freuen.
 
 Demo für :ref:`sn_caldav_py`
 
