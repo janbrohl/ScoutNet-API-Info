@@ -10,9 +10,9 @@ Die Version zum Ansehen liegt auf http://scoutnet-apis.readthedocs.io/
 Selber bauen
 -------------
 
-Um die Doku zu selbst zu bauen brauchst Du am besten Python 3.5.
+Um die Doku zu selbst zu bauen solltest Du Python 3.5 installiert haben. (Spätere Versionen sollten, frühere könnten funktionieren)
 
-Am besten solltest du mit venv_ arbeiten. Die benötigten Pakete kannst Du dann mit ``pip install -r docs-requirements`` installieren.
+Am besten solltest du mit venv_ arbeiten. Die benötigten Pakete kannst Du dann am besten mit ``pip install --upgrade -r docs-requirements.txt`` installieren.
 
 Erstellen kannst du dann die Doku mit::
 
