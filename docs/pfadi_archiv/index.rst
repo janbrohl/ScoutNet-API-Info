@@ -1,7 +1,7 @@
 .. _pfadi_archiv:
 
-Pfadi-Archiv
-========================
+Pfadi-Archiv-Template-System
+=============================
 
 Allgemeine Info zum Pfadi-Archiv gibt es auf https://archiv.scoutnet.de/
 
