@@ -68,7 +68,7 @@ Glossar
        SN-RPC bezeichnet hier den Webservice den man per :term:`JSON-RPC` (1.0) über HTTP(S) POST ansprechen kann.
     
     sn-caldav
-        SN-CalDAV bezeihnet hier den Webservice den man per modifiziertem :term:`CalDAV` (+:term:`JSON`) ansprechen kann. 
+        SN-CalDAV bezeihnet hier den Webservice den man per modifiziertem :term:`CalDAV` (+ :term:`JSON`) ansprechen kann. 
 
        
     bibliothek requests
