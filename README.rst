@@ -12,7 +12,9 @@ Selber bauen
 
 Um die Doku zu selbst zu bauen solltest Du Python_ 3.5 installiert haben. (Spätere Versionen sollten, frühere könnten funktionieren)
 
-Am besten solltest du mit venv_ arbeiten. Die benötigten Pakete kannst Du dann am besten mit ``pip install --upgrade -r docs-requirements.txt`` installieren.
+Am besten solltest du mit venv_ arbeiten. Die benötigten Pakete kannst Du dann am besten installieren mit::
+
+    pip install --upgrade -r docs-requirements.txt
 
 Erstellen kannst du dann die Doku mit::
 
