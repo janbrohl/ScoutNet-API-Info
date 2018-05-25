@@ -1,0 +1,559 @@
+swagger: '2.0'
+info:
+  version: '0.2'
+  title: Scoutnet.de REST-API
+host: www.scoutnet.de
+schemes:
+  - http
+  - https
+basePath: /api/0.2
+paths:
+  /group/:
+    get:
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/group"
+      parameters: 
+        - name: json
+          in: query
+          required: true
+          type: string
+          format: JSON-Array
+          
+  /groups/:
+    get:
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/groups"
+      parameters: 
+        - name: json
+          in: query
+          required: true
+          type: string
+          
+  /group/{group_id}/:
+    get:
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/group"
+      parameters: 
+        - name: group_id
+          in: path
+          required: true
+          type: string
+  /group/{group_id}/events/:
+    get:
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/events"
+      parameters: 
+        - name: group_id
+          in: path
+          required: true
+          type: string
+  /group/{group_id}/children/:
+    get:
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/groups"
+      parameters: 
+        - name: group_id
+          in: path
+          required: true
+          type: string
+  /group/{group_id}/parents/:
+    get:
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/groups"
+      parameters: 
+        - name: group_id
+          in: path
+          required: true
+          type: string
+  /group/{group_id}/parent/:
+    get:
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/group"
+      parameters: 
+        - name: group_id
+          in: path
+          required: true
+          type: string
+  /group/{group_id}/parent/{layer}:
+    get:
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/group"
+      parameters: 
+        - name: group_id
+          in: path
+          required: true
+          type: string
+        - name: layer
+          in: path
+          required: true
+          type: string
+  /group/{group_id}/urls/:
+    get:
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/urls"
+      parameters: 
+        - name: group_id
+          in: path
+          required: true
+          type: string
+  /group/{group_id}/sections/:
+    get:
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/sections"
+      parameters: 
+        - name: group_id
+          in: path
+          required: true
+          type: string
+          
+  /event/:
+    get:
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/event"
+      parameters: 
+        - name: json
+          in: query
+          required: true
+          type: string
+          
+  /events/:
+    get:
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/events"
+      parameters: 
+        - name: json
+          in: query
+          required: true
+          type: string
+  /event/{event_id}/:
+    get:
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/event"
+      parameters: 
+        - name: event_id
+          in: path
+          required: true
+          type: string
+  /event/{event_id}/group/:
+    get:
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/group"
+      parameters: 
+        - name: event_id
+          in: path
+          required: true
+          type: string          
+  /url/:
+    get:
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/url"
+      parameters: 
+        - name: json
+          in: query
+          required: true
+          type: string
+          
+  /urls/:
+    get:
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/urls"
+      parameters: 
+        - name: json
+          in: query
+          required: true
+          type: string
+  /url/{url_id}/:
+    get:
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/url"
+      parameters: 
+        - name: url_id
+          in: path
+          required: true
+          type: string          
+  /section/:
+    get:
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/section"
+      parameters: 
+        - name: json
+          in: query
+          required: true
+          type: string
+          
+  /sections/:
+    get:
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/sections"
+      parameters: 
+        - name: json
+          in: query
+          required: true
+          type: string
+  /section/{section_id}/:
+    get:
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/section"
+      parameters: 
+        - name: section_id
+          in: path
+          required: true
+          type: string             
+          
+
+  
+definitions:
+  group: 
+    description: Beschreibung fehlt
+    properties:
+     city:
+       description: Beschreibung fehlt
+       title: City schema.
+       type: string
+     country:
+       description: Beschreibung fehlt
+       title: Country schema.
+       type: string
+     district:
+       description: Beschreibung fehlt
+       title: District schema.
+       type: string
+     federal_state:
+       description: Beschreibung fehlt
+       title: Federal_state schema.
+       type: string
+     global_id:
+       description: Beschreibung fehlt
+       title: Global_id schema.
+       type: string
+     internal_id:
+       description: Beschreibung fehlt
+       title: Internal_id schema.
+       type: string
+     kind:
+       description: Beschreibung fehlt
+       enum:
+         - group
+       title: Kind schema.
+       type: string
+     layer:
+       description: Beschreibung fehlt
+       title: Layer schema.
+       type: string
+     name:
+       description: Beschreibung fehlt
+       title: Name schema.
+       type: string
+     zip:
+       description: Beschreibung fehlt
+       title: Zip schema.
+       type: string
+    title: Group
+    type: object
+    
+  groups:
+    description: Beschreibung fehlt
+    properties:
+      element_kind:
+        description: Beschreibung fehlt
+        title: Element_kind schema.
+        type: string
+        enum: 
+          - "group"
+      elements:
+        description: Beschreibung fehlt
+        items:
+          $ref: "#/definitions/group"
+        title: Elements schema.
+        type: array
+      kind:
+        description: Beschreibung fehlt
+        title: Kind schema.
+        type: string
+        enum: 
+          - "collection"
+    title: Group collection
+    type: object
+    
+  section:
+    description: Beschreibung fehlt
+    properties:
+      color:
+        description: Beschreibung fehlt
+        title: Color schema.
+        type: string
+      end_age:
+        description: Beschreibung fehlt
+        title: End_age schema.
+        type: string
+      id:
+        description: Beschreibung fehlt
+        title: Id schema.
+        type: string
+      kind:
+        description: Beschreibung fehlt
+        enum:
+          - section
+        title: Kind schema.
+        type: string
+      name:
+        description: Beschreibung fehlt
+        title: Name schema.
+        type: string
+      start_age:
+        description: Beschreibung fehlt
+        title: Start_age schema.
+        type: string
+    title: Section
+    type: object
+  sections:
+    description: Beschreibung fehlt
+    properties:
+      element_kind:
+        description: Beschreibung fehlt
+        title: Element_kind schema.
+        type: string
+        enum: 
+          - "section"
+      elements:
+        description: Beschreibung fehlt
+        items:
+          $ref: "#/definitions/section"
+        title: Elements schema.
+        type: array
+      kind:
+        description: Beschreibung fehlt
+        title: Kind schema.
+        type: string
+        enum: 
+          - "collection"
+    title: Section collection
+    type: object
+  url:
+    description: Beschreibung fehlt
+    properties:
+      group_id:
+        description: Beschreibung fehlt
+        title: Group_id schema.
+        type: string
+      id:
+        description: Beschreibung fehlt
+        title: Id schema.
+        type: string
+      kind:
+        description: Beschreibung fehlt
+        enum:
+          - url
+        title: Kind schema.
+        type: string
+      text:
+        description: Beschreibung fehlt
+        title: Text schema.
+        type: string
+      url:
+        description: Beschreibung fehlt
+        format: uri
+        title: Url schema.
+        type: string
+    title: URL
+    type: object
+  urls:
+    description: Beschreibung fehlt
+    properties:
+      element_kind:
+        description: Beschreibung fehlt
+        title: Element_kind schema.
+        type: string
+        enum: 
+          - "url"
+      elements:
+        description: Beschreibung fehlt
+        items:
+          $ref: "#/definitions/url"
+        title: Elements schema.
+        type: array
+      kind:
+        description: Beschreibung fehlt
+        title: Kind schema.
+        type: string
+        enum: 
+          - "collection"
+    title: URL collection
+    type: object
+  event:
+    description: Beschreibung fehlt
+    properties:
+      description:
+        description: Beschreibung fehlt
+        title: Description schema.
+        type: string
+      end_date:
+        description: Beschreibung fehlt
+        title: End_date schema.
+        type: string
+      end_time:
+        description: Beschreibung fehlt
+        title: End_time schema.
+        type: string
+      group_id:
+        description: Beschreibung fehlt
+        title: Group_id schema.
+        type: string
+      id:
+        description: Beschreibung fehlt
+        title: Id schema.
+        type: string
+      keywords:
+        description: Beschreibung fehlt
+        properties:
+          elements:
+            description: Beschreibung fehlt
+            title: Elements schema.
+            type: object
+          kind:
+            description: Beschreibung fehlt
+            title: Kind schema.
+            type: string
+        title: Keywords schema.
+        type: object
+      kind:
+        description: Beschreibung fehlt
+        enum:
+          - event
+        title: Kind schema.
+        type: string
+      last_modified_by:
+        description: Beschreibung fehlt
+        title: Last_modified_by schema.
+        type: string
+      last_modified_on:
+        description: Beschreibung fehlt
+        format: date-time
+        title: Last_modified_on schema.
+        type: string
+      location:
+        description: Beschreibung fehlt
+        title: Location schema.
+        type: string
+      organizer:
+        description: Beschreibung fehlt
+        title: Organizer schema.
+        type: string
+      start_date:
+        description: Beschreibung fehlt
+        title: Start_date schema.
+        type: string
+      start_time:
+        description: Beschreibung fehlt
+        title: Start_time schema.
+        type: string
+      target_group:
+        description: Beschreibung fehlt
+        title: Target_group schema.
+        type: string
+      title:
+        description: Beschreibung fehlt
+        title: Title schema.
+        type: string
+      uid:
+        description: Beschreibung fehlt
+        title: Uid schema.
+        type: string
+      url:
+        description: Beschreibung fehlt
+        format: uri
+        title: Url schema.
+        type: string
+      url_text:
+        description: Beschreibung fehlt
+        title: Url_text schema.
+        type: string
+      zip:
+        description: Beschreibung fehlt
+        title: Zip schema.
+        type: string
+    title: Event
+    type: object
+  events:
+    description: Beschreibung fehlt
+    properties:
+      element_kind:
+        description: Beschreibung fehlt
+        title: Element_kind schema.
+        type: string
+        enum: 
+          - "event"
+      elements:
+        description: Beschreibung fehlt
+        items:
+          $ref: "#/definitions/event"
+        title: Elements schema.
+        type: array
+      kind:
+        description: Beschreibung fehlt
+        title: Kind schema.
+        type: string
+        enum: 
+          - "collection"
+    title: Event collection
+    type: object
