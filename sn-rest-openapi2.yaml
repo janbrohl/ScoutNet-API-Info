@@ -4,7 +4,6 @@ info:
   title: Scoutnet.de REST-API
 host: www.scoutnet.de
 schemes:
-  - http
   - https
 basePath: /api/0.2
 paths:
@@ -34,6 +33,7 @@ paths:
           in: query
           required: true
           type: string
+          format: JSON-Array
           
   /group/{group_id}/:
     get:
@@ -148,6 +148,7 @@ paths:
           in: query
           required: true
           type: string
+          format: JSON-Array
           
   /events/:
     get:
@@ -161,6 +162,7 @@ paths:
           in: query
           required: true
           type: string
+          format: JSON-Array
   /event/{event_id}/:
     get:
       responses:
@@ -197,6 +199,7 @@ paths:
           in: query
           required: true
           type: string
+          format: JSON-Array
           
   /urls/:
     get:
@@ -210,6 +213,7 @@ paths:
           in: query
           required: true
           type: string
+          format: JSON-Array
   /url/{url_id}/:
     get:
       responses:
@@ -234,6 +238,7 @@ paths:
           in: query
           required: true
           type: string
+          format: JSON-Array
           
   /sections/:
     get:
@@ -247,6 +252,8 @@ paths:
           in: query
           required: true
           type: string
+          format: JSON-Array
+          
   /section/{section_id}/:
     get:
       responses:
