@@ -2,10 +2,12 @@ swagger: '2.0'
 info:
   version: '0.2'
   title: Scoutnet.de REST-API
-host: www.scoutnet.de
-schemes:
-  - https
+
 basePath: /api/0.2
+produces:
+  - application/json
+consumes:
+  - application/json
 paths:
   /group/:
     get:
@@ -14,13 +16,18 @@ paths:
           description: OK
           schema:
             $ref: "#/definitions/group"
-      parameters: 
+      parameters:
         - name: json
           in: query
           required: true
           type: string
           format: JSON-Array
+          description: |-
+            MUST be a JSON-serialized array consising of a [PfadiQL](https://www.scoutnet.de/api-info/pfadiql.html)-string and (optional) an array containing ?-masked parameters.
+            Example: `["city in ? and federal_state = ?",[["Marburg","Fulda"], "Hessen"]]`
           
+          
+
   /groups/:
     get:
       responses:
@@ -28,13 +35,16 @@ paths:
           description: OK
           schema:
             $ref: "#/definitions/groups"
-      parameters: 
+      parameters:
         - name: json
           in: query
           required: true
           type: string
           format: JSON-Array
-          
+          description: |-
+            MUST be a JSON-serialized array consising of a [PfadiQL](https://www.scoutnet.de/api-info/pfadiql.html)-string and (optional) an array containing ?-masked parameters.
+            Example: `["city in ? and federal_state = ?",[["Marburg","Fulda"], "Hessen"]]`
+
   /group/{group_id}/:
     get:
       responses:
@@ -42,11 +52,12 @@ paths:
           description: OK
           schema:
             $ref: "#/definitions/group"
-      parameters: 
+      parameters:
         - name: group_id
           in: path
           required: true
           type: string
+
   /group/{group_id}/events/:
     get:
       responses:
@@ -54,11 +65,12 @@ paths:
           description: OK
           schema:
             $ref: "#/definitions/events"
-      parameters: 
+      parameters:
         - name: group_id
           in: path
           required: true
           type: string
+
   /group/{group_id}/children/:
     get:
       responses:
@@ -66,11 +78,12 @@ paths:
           description: OK
           schema:
             $ref: "#/definitions/groups"
-      parameters: 
+      parameters:
         - name: group_id
           in: path
           required: true
           type: string
+
   /group/{group_id}/parents/:
     get:
       responses:
@@ -78,11 +91,12 @@ paths:
           description: OK
           schema:
             $ref: "#/definitions/groups"
-      parameters: 
+      parameters:
         - name: group_id
           in: path
           required: true
           type: string
+
   /group/{group_id}/parent/:
     get:
       responses:
@@ -90,11 +104,12 @@ paths:
           description: OK
           schema:
             $ref: "#/definitions/group"
-      parameters: 
+      parameters:
         - name: group_id
           in: path
           required: true
           type: string
+
   /group/{group_id}/parent/{layer}:
     get:
       responses:
@@ -102,7 +117,7 @@ paths:
           description: OK
           schema:
             $ref: "#/definitions/group"
-      parameters: 
+      parameters:
         - name: group_id
           in: path
           required: true
@@ -111,6 +126,7 @@ paths:
           in: path
           required: true
           type: string
+
   /group/{group_id}/urls/:
     get:
       responses:
@@ -118,11 +134,12 @@ paths:
           description: OK
           schema:
             $ref: "#/definitions/urls"
-      parameters: 
+      parameters:
         - name: group_id
           in: path
           required: true
           type: string
+
   /group/{group_id}/sections/:
     get:
       responses:
@@ -130,12 +147,12 @@ paths:
           description: OK
           schema:
             $ref: "#/definitions/sections"
-      parameters: 
+      parameters:
         - name: group_id
           in: path
           required: true
           type: string
-          
+
   /event/:
     get:
       responses:
@@ -143,13 +160,16 @@ paths:
           description: OK
           schema:
             $ref: "#/definitions/event"
-      parameters: 
+      parameters:
         - name: json
           in: query
           required: true
           type: string
           format: JSON-Array
-          
+          description: |-
+            MUST be a JSON-serialized array consising of a [PfadiQL](https://www.scoutnet.de/api-info/pfadiql.html)-string and (optional) an array containing ?-masked parameters.
+            Example: `["? in sections and organizer in ?",["Rover",["DPSG","WOSM"]]]`
+
   /events/:
     get:
       responses:
@@ -157,12 +177,16 @@ paths:
           description: OK
           schema:
             $ref: "#/definitions/events"
-      parameters: 
+      parameters:
         - name: json
           in: query
           required: true
           type: string
           format: JSON-Array
+          description: |-
+            MUST be a JSON-serialized array consising of a [PfadiQL](https://www.scoutnet.de/api-info/pfadiql.html)-string and (optional) an array containing ?-masked parameters.
+            Example: `["? in sections and organizer in ?",["Rover",["DPSG","WOSM"]]]`
+ 
   /event/{event_id}/:
     get:
       responses:
@@ -170,11 +194,12 @@ paths:
           description: OK
           schema:
             $ref: "#/definitions/event"
-      parameters: 
+      parameters:
         - name: event_id
           in: path
           required: true
           type: string
+
   /event/{event_id}/group/:
     get:
       responses:
@@ -182,11 +207,12 @@ paths:
           description: OK
           schema:
             $ref: "#/definitions/group"
-      parameters: 
+      parameters:
         - name: event_id
           in: path
           required: true
-          type: string          
+          type: string
+
   /url/:
     get:
       responses:
@@ -194,13 +220,16 @@ paths:
           description: OK
           schema:
             $ref: "#/definitions/url"
-      parameters: 
+      parameters:
         - name: json
           in: query
           required: true
           type: string
           format: JSON-Array
-          
+          description: |-
+            MUST be a JSON-serialized array consising of a [PfadiQL](https://www.scoutnet.de/api-info/pfadiql.html)-string and (optional) an array containing ?-masked parameters.
+            Example: `["text = ?",["Blog"]]`
+
   /urls/:
     get:
       responses:
@@ -208,12 +237,16 @@ paths:
           description: OK
           schema:
             $ref: "#/definitions/urls"
-      parameters: 
+      parameters:
         - name: json
           in: query
           required: true
           type: string
           format: JSON-Array
+          description: |-
+            MUST be a JSON-serialized array consising of a [PfadiQL](https://www.scoutnet.de/api-info/pfadiql.html)-string and (optional) an array containing ?-masked parameters.
+            Example: `["text = ?",["Blog"]]`
+
   /url/{url_id}/:
     get:
       responses:
@@ -221,11 +254,12 @@ paths:
           description: OK
           schema:
             $ref: "#/definitions/url"
-      parameters: 
+      parameters:
         - name: url_id
           in: path
           required: true
-          type: string          
+          type: string
+
   /section/:
     get:
       responses:
@@ -233,13 +267,16 @@ paths:
           description: OK
           schema:
             $ref: "#/definitions/section"
-      parameters: 
+      parameters:
         - name: json
           in: query
           required: true
           type: string
           format: JSON-Array
-          
+          description: |-
+            MUST be a JSON-serialized array consising of a [PfadiQL](https://www.scoutnet.de/api-info/pfadiql.html)-string and (optional) an array containing ?-masked parameters.
+            Example: `["name in ? and start_age < ?",[["Pfadfinder", "jungpfadfinder"],13]]`
+
   /sections/:
     get:
       responses:
@@ -247,13 +284,16 @@ paths:
           description: OK
           schema:
             $ref: "#/definitions/sections"
-      parameters: 
+      parameters:
         - name: json
           in: query
           required: true
           type: string
           format: JSON-Array
-          
+          description: |-
+            MUST be a JSON-serialized array consising of a [PfadiQL](https://www.scoutnet.de/api-info/pfadiql.html)-string and (optional) an array containing ?-masked parameters.
+            Example: `["name in ? and start_age < ?",[["Pfadfinder", "jungpfadfinder"],13]]`
+
   /section/{section_id}/:
     get:
       responses:
@@ -261,16 +301,37 @@ paths:
           description: OK
           schema:
             $ref: "#/definitions/section"
-      parameters: 
+      parameters:
         - name: section_id
           in: path
           required: true
-          type: string             
-          
+          type: string
 
-  
+
 definitions:
-  group: 
+  collection:
+    description: Beschreibung fehlt
+    properties:
+      element_kind:
+        description: Beschreibung fehlt
+        title: Element_kind schema.
+        type: string
+      elements:
+        description: Beschreibung fehlt
+        title: Elements schema.
+        type: array
+        items:
+          type: object
+      kind:
+        description: Beschreibung fehlt
+        title: Kind schema.
+        type: string
+        enum:
+          - "collection"
+    title: Collection
+    type: object
+
+  group:
     description: Beschreibung fehlt
     properties:
      city:
@@ -317,31 +378,24 @@ definitions:
        type: string
     title: Group
     type: object
-    
+
   groups:
     description: Beschreibung fehlt
-    properties:
-      element_kind:
-        description: Beschreibung fehlt
-        title: Element_kind schema.
-        type: string
-        enum: 
-          - "group"
-      elements:
-        description: Beschreibung fehlt
-        items:
-          $ref: "#/definitions/group"
-        title: Elements schema.
-        type: array
-      kind:
-        description: Beschreibung fehlt
-        title: Kind schema.
-        type: string
-        enum: 
-          - "collection"
     title: Group collection
-    type: object
-    
+    allOf:
+      - $ref: "#/definitions/collection"
+      -
+        properties:
+          element_kind:
+            type: string
+            enum:
+              - "group"
+          elements:
+            items:
+              $ref: "#/definitions/group"
+            type: array
+        type: object
+
   section:
     description: Beschreibung fehlt
     properties:
@@ -373,29 +427,24 @@ definitions:
         type: string
     title: Section
     type: object
+
   sections:
     description: Beschreibung fehlt
-    properties:
-      element_kind:
-        description: Beschreibung fehlt
-        title: Element_kind schema.
-        type: string
-        enum: 
-          - "section"
-      elements:
-        description: Beschreibung fehlt
-        items:
-          $ref: "#/definitions/section"
-        title: Elements schema.
-        type: array
-      kind:
-        description: Beschreibung fehlt
-        title: Kind schema.
-        type: string
-        enum: 
-          - "collection"
     title: Section collection
-    type: object
+    allOf:
+      - $ref: "#/definitions/collection"
+      -
+        properties:
+          element_kind:
+            type: string
+            enum:
+              - "section"
+          elements:
+            items:
+              $ref: "#/definitions/section"
+            type: array
+        type: object
+
   url:
     description: Beschreibung fehlt
     properties:
@@ -424,29 +473,24 @@ definitions:
         type: string
     title: URL
     type: object
+
   urls:
     description: Beschreibung fehlt
-    properties:
-      element_kind:
-        description: Beschreibung fehlt
-        title: Element_kind schema.
-        type: string
-        enum: 
-          - "url"
-      elements:
-        description: Beschreibung fehlt
-        items:
-          $ref: "#/definitions/url"
-        title: Elements schema.
-        type: array
-      kind:
-        description: Beschreibung fehlt
-        title: Kind schema.
-        type: string
-        enum: 
-          - "collection"
     title: URL collection
-    type: object
+    allOf:
+      - $ref: "#/definitions/collection"
+      -
+        properties:
+          element_kind:
+            type: string
+            enum:
+              - "url"
+          elements:
+            items:
+              $ref: "#/definitions/url"
+            type: array
+        type: object
+
   event:
     description: Beschreibung fehlt
     properties:
@@ -458,10 +502,12 @@ definitions:
         description: Beschreibung fehlt
         title: End_date schema.
         type: string
+        format: date
       end_time:
         description: Beschreibung fehlt
         title: End_time schema.
         type: string
+        format: time
       group_id:
         description: Beschreibung fehlt
         title: Group_id schema.
@@ -510,10 +556,12 @@ definitions:
         description: Beschreibung fehlt
         title: Start_date schema.
         type: string
+        format: date
       start_time:
         description: Beschreibung fehlt
         title: Start_time schema.
         type: string
+        format: time
       target_group:
         description: Beschreibung fehlt
         title: Target_group schema.
@@ -541,26 +589,37 @@ definitions:
         type: string
     title: Event
     type: object
+
   events:
     description: Beschreibung fehlt
+    title: Event collection
+    allOf:
+      - $ref: "#/definitions/collection"
+      -
+        properties:
+          element_kind:
+            type: string
+            enum:
+              - "event"
+          elements:
+            items:
+              $ref: "#/definitions/event"
+            type: array
+        type: object
+
+  exception:
+    description: Beschreibung fehlt
     properties:
-      element_kind:
+      message:
         description: Beschreibung fehlt
-        title: Element_kind schema.
+        title: Message schema.
         type: string
-        enum: 
-          - "event"
-      elements:
-        description: Beschreibung fehlt
-        items:
-          $ref: "#/definitions/event"
-        title: Elements schema.
-        type: array
       kind:
         description: Beschreibung fehlt
         title: Kind schema.
         type: string
-        enum: 
-          - "collection"
-    title: Event collection
+        enum:
+          - "exception"
+    title: Exception collection
     type: object
+
