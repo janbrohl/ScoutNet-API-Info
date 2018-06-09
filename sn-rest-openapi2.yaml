@@ -8,6 +8,10 @@ produces:
   - application/json
 consumes:
   - application/json
+externalDocs:
+  description: Official documentation (DE)
+  url: https://www.scoutnet.de/api-info/webservice.html
+
 paths:
   /group/:
     get:
@@ -309,75 +313,84 @@ paths:
 
 
 definitions:
-  collection:
+  basic_object:
+    title: Basic Object
     description: Beschreibung fehlt
     properties:
-      element_kind:
-        description: Beschreibung fehlt
-        title: Element_kind schema.
-        type: string
-      elements:
-        description: Beschreibung fehlt
-        title: Elements schema.
-        type: array
-        items:
-          type: object
       kind:
-        description: Beschreibung fehlt
-        title: Kind schema.
+        title: Object Type
         type: string
-        enum:
-          - "collection"
-    title: Collection
     type: object
+    
+  collection:
+    title: Collection
+    description: Beschreibung fehlt
+    allOf:
+    - $ref: "#/definitions/basic_object"
+    -
+      properties:
+        element_kind:
+          title: Type of Elements (Items)
+          type: string
+        elements:
+          title: Elements (Items)
+          type: array
+          items:
+            $ref: "#/definitions/basic_object"
+        kind:
+          type: string
+          enum:
+            - collection
+      type: object
 
   group:
-    description: Beschreibung fehlt
-    properties:
-     city:
-       description: Beschreibung fehlt
-       title: City schema.
-       type: string
-     country:
-       description: Beschreibung fehlt
-       title: Country schema.
-       type: string
-     district:
-       description: Beschreibung fehlt
-       title: District schema.
-       type: string
-     federal_state:
-       description: Beschreibung fehlt
-       title: Federal_state schema.
-       type: string
-     global_id:
-       description: Beschreibung fehlt
-       title: Global_id schema.
-       type: string
-     internal_id:
-       description: Beschreibung fehlt
-       title: Internal_id schema.
-       type: string
-     kind:
-       description: Beschreibung fehlt
-       enum:
-         - group
-       title: Kind schema.
-       type: string
-     layer:
-       description: Beschreibung fehlt
-       title: Layer schema.
-       type: string
-     name:
-       description: Beschreibung fehlt
-       title: Name schema.
-       type: string
-     zip:
-       description: Beschreibung fehlt
-       title: Zip schema.
-       type: string
     title: Group
-    type: object
+    description: Beschreibung fehlt
+    allOf:
+      - $ref: "#/definitions/basic_object"
+      -
+        properties:
+         city:
+           description: Beschreibung fehlt
+           title: City schema.
+           type: string
+         country:
+           description: Beschreibung fehlt
+           title: Country schema.
+           type: string
+         district:
+           description: Beschreibung fehlt
+           title: District schema.
+           type: string
+         federal_state:
+           description: Beschreibung fehlt
+           title: Federal_state schema.
+           type: string
+         global_id:
+           description: Beschreibung fehlt
+           title: Global_id schema.
+           type: string
+         internal_id:
+           description: Beschreibung fehlt
+           title: Internal_id schema.
+           type: string
+         kind:
+           enum:
+             - group
+           type: string
+         layer:
+           description: Beschreibung fehlt
+           title: Layer schema.
+           type: string
+         name:
+           description: Beschreibung fehlt
+           title: Name schema.
+           type: string
+         zip:
+           description: Beschreibung fehlt
+           title: Zip schema.
+           type: string
+        type: object
 
   groups:
     description: Beschreibung fehlt
@@ -397,36 +410,39 @@ definitions:
         type: object
 
   section:
-    description: Beschreibung fehlt
-    properties:
-      color:
-        description: Beschreibung fehlt
-        title: Color schema.
-        type: string
-      end_age:
-        description: Beschreibung fehlt
-        title: End_age schema.
-        type: string
-      id:
-        description: Beschreibung fehlt
-        title: Id schema.
-        type: string
-      kind:
-        description: Beschreibung fehlt
-        enum:
-          - section
-        title: Kind schema.
-        type: string
-      name:
-        description: Beschreibung fehlt
-        title: Name schema.
-        type: string
-      start_age:
-        description: Beschreibung fehlt
-        title: Start_age schema.
-        type: string
     title: Section
-    type: object
+    description: Beschreibung fehlt
+    allOf:
+      - $ref: "#/definitions/basic_object"
+      -
+        properties:
+          color:
+            description: Beschreibung fehlt
+            title: Color schema.
+            type: string
+          end_age:
+            description: Beschreibung fehlt
+            title: End_age schema.
+            type: string
+          id:
+            description: Beschreibung fehlt
+            title: Id schema.
+            type: string
+          kind:
+            description: Beschreibung fehlt
+            enum:
+              - section
+            title: Kind schema.
+            type: string
+          name:
+            description: Beschreibung fehlt
+            title: Name schema.
+            type: string
+          start_age:
+            description: Beschreibung fehlt
+            title: Start_age schema.
+            type: string
+        type: object
 
   sections:
     description: Beschreibung fehlt
@@ -446,33 +462,36 @@ definitions:
         type: object
 
   url:
-    description: Beschreibung fehlt
-    properties:
-      group_id:
-        description: Beschreibung fehlt
-        title: Group_id schema.
-        type: string
-      id:
-        description: Beschreibung fehlt
-        title: Id schema.
-        type: string
-      kind:
-        description: Beschreibung fehlt
-        enum:
-          - url
-        title: Kind schema.
-        type: string
-      text:
-        description: Beschreibung fehlt
-        title: Text schema.
-        type: string
-      url:
-        description: Beschreibung fehlt
-        format: uri
-        title: Url schema.
-        type: string
     title: URL
-    type: object
+    description: Beschreibung fehlt
+    allOf:
+      - $ref: "#/definitions/basic_object"
+      -
+        properties:
+          group_id:
+            description: Beschreibung fehlt
+            title: Group_id schema.
+            type: string
+          id:
+            description: Beschreibung fehlt
+            title: Id schema.
+            type: string
+          kind:
+            description: Beschreibung fehlt
+            enum:
+              - url
+            title: Kind schema.
+            type: string
+          text:
+            description: Beschreibung fehlt
+            title: Text schema.
+            type: string
+          url:
+            description: Beschreibung fehlt
+            format: uri
+            title: Url schema.
+            type: string
+        type: object
 
   urls:
     description: Beschreibung fehlt
@@ -492,103 +511,108 @@ definitions:
         type: object
 
   event:
+    title: Event
     description: Beschreibung fehlt
-    properties:
-      description:
-        description: Beschreibung fehlt
-        title: Description schema.
-        type: string
-      end_date:
-        description: Beschreibung fehlt
-        title: End_date schema.
-        type: string
-        format: date
-      end_time:
-        description: Beschreibung fehlt
-        title: End_time schema.
-        type: string
-        format: time
-      group_id:
-        description: Beschreibung fehlt
-        title: Group_id schema.
-        type: string
-      id:
-        description: Beschreibung fehlt
-        title: Id schema.
-        type: string
-      keywords:
-        description: Beschreibung fehlt
+    allOf:
+      - $ref: "#/definitions/basic_object"
+      -
         properties:
-          elements:
+          description:
             description: Beschreibung fehlt
-            title: Elements schema.
+            title: Description schema.
+            type: string
+          end_date:
+            description: Beschreibung fehlt
+            title: End_date schema.
+            type: string
+            format: date
+          end_time:
+            description: Beschreibung fehlt
+            title: End_time schema.
+            type: string
+            format: time
+          group_id:
+            description: Beschreibung fehlt
+            title: Group_id schema.
+            type: string
+          id:
+            description: Beschreibung fehlt
+            title: Id schema.
+            type: string
+          keywords:
+            description: Beschreibung fehlt
+            properties:
+              elements:
+                description: Beschreibung fehlt
+                title: Elements schema.
+                type: object
+              kind:
+                description: Beschreibung fehlt
+                title: Kind schema.
+                type: string
+                enum:
+                  - "collection"
+            title: Keywords schema.
             type: object
           kind:
             description: Beschreibung fehlt
+            enum:
+              - event
             title: Kind schema.
             type: string
-        title: Keywords schema.
+          last_modified_by:
+            description: Beschreibung fehlt
+            title: Last_modified_by schema.
+            type: string
+          last_modified_on:
+            description: Beschreibung fehlt
+            format: date-time
+            title: Last_modified_on schema.
+            type: string
+          location:
+            description: Beschreibung fehlt
+            title: Location schema.
+            type: string
+          organizer:
+            description: Beschreibung fehlt
+            title: Organizer schema.
+            type: string
+          start_date:
+            description: Beschreibung fehlt
+            title: Start_date schema.
+            type: string
+            format: date
+          start_time:
+            description: Beschreibung fehlt
+            title: Start_time schema.
+            type: string
+            format: time
+          target_group:
+            description: Beschreibung fehlt
+            title: Target_group schema.
+            type: string
+          title:
+            description: Beschreibung fehlt
+            title: Title schema.
+            type: string
+          uid:
+            description: Beschreibung fehlt
+            title: Uid schema.
+            type: string
+          url:
+            description: Beschreibung fehlt
+            format: uri
+            title: Url schema.
+            type: string
+          url_text:
+            description: Beschreibung fehlt
+            title: Url_text schema.
+            type: string
+          zip:
+            description: Beschreibung fehlt
+            title: Zip schema.
+            type: string
         type: object
-      kind:
-        description: Beschreibung fehlt
-        enum:
-          - event
-        title: Kind schema.
-        type: string
-      last_modified_by:
-        description: Beschreibung fehlt
-        title: Last_modified_by schema.
-        type: string
-      last_modified_on:
-        description: Beschreibung fehlt
-        format: date-time
-        title: Last_modified_on schema.
-        type: string
-      location:
-        description: Beschreibung fehlt
-        title: Location schema.
-        type: string
-      organizer:
-        description: Beschreibung fehlt
-        title: Organizer schema.
-        type: string
-      start_date:
-        description: Beschreibung fehlt
-        title: Start_date schema.
-        type: string
-        format: date
-      start_time:
-        description: Beschreibung fehlt
-        title: Start_time schema.
-        type: string
-        format: time
-      target_group:
-        description: Beschreibung fehlt
-        title: Target_group schema.
-        type: string
-      title:
-        description: Beschreibung fehlt
-        title: Title schema.
-        type: string
-      uid:
-        description: Beschreibung fehlt
-        title: Uid schema.
-        type: string
-      url:
-        description: Beschreibung fehlt
-        format: uri
-        title: Url schema.
-        type: string
-      url_text:
-        description: Beschreibung fehlt
-        title: Url_text schema.
-        type: string
-      zip:
-        description: Beschreibung fehlt
-        title: Zip schema.
-        type: string
-    title: Event
-    type: object
 
   events:
     description: Beschreibung fehlt
@@ -608,18 +632,22 @@ definitions:
         type: object
 
   exception:
+    title: Exception
     description: Beschreibung fehlt
-    properties:
-      message:
+    allOf:
+      - $ref: "#/definitions/basic_object"
+      -
         description: Beschreibung fehlt
-        title: Message schema.
-        type: string
-      kind:
-        description: Beschreibung fehlt
-        title: Kind schema.
-        type: string
-        enum:
-          - "exception"
-    title: Exception collection
-    type: object
+        properties:
+          message:
+            description: Beschreibung fehlt
+            title: Message schema.
+            type: string
+          kind:
+            description: Beschreibung fehlt
+            title: Kind schema.
+            type: string
+            enum:
+              - "exception"
+        type: object
 
