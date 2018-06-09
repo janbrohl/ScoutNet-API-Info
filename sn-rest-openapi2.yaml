@@ -15,6 +15,8 @@ externalDocs:
 paths:
   /group/:
     get:
+      summary: Query for a single group
+      operationId: query_group
       responses:
         200:
           description: OK
@@ -34,6 +36,8 @@ paths:
 
   /groups/:
     get:
+      summary: Query for a collection of groups
+      operationId: query_groups
       responses:
         200:
           description: OK
@@ -51,6 +55,8 @@ paths:
 
   /group/{group_id}/:
     get:
+      summary: Retrieve a group
+      operationId: get_group
       responses:
         200:
           description: OK
@@ -64,6 +70,8 @@ paths:
 
   /group/{group_id}/events/:
     get:
+      summary: Retrieve all events for the group
+      operationId: get_group_events
       responses:
         200:
           description: OK
@@ -77,6 +85,8 @@ paths:
 
   /group/{group_id}/children/:
     get:
+      summary: Retrieve all direct sub-groups for the group
+      operationId: get_group_children
       responses:
         200:
           description: OK
@@ -90,6 +100,8 @@ paths:
 
   /group/{group_id}/parents/:
     get:
+      summary: Retrieve all transitive super-groups for the group
+      operationId: get_group_parents
       responses:
         200:
           description: OK
@@ -103,6 +115,8 @@ paths:
 
   /group/{group_id}/parent/:
     get:
+      summary: Retrieve the direct super-groups for the group
+      operationId: get_group_parent
       responses:
         200:
           description: OK
@@ -116,6 +130,8 @@ paths:
 
   /group/{group_id}/parent/{layer}:
     get:
+      summary: Retrieve the transitive super-groups for the group in the given layer
+      operationId: get_group_parent_layer
       responses:
         200:
           description: OK
@@ -133,6 +149,8 @@ paths:
 
   /group/{group_id}/urls/:
     get:
+      summary: Retrieve all urls for the group
+      operationId: get_group_urls
       responses:
         200:
           description: OK
@@ -146,6 +164,8 @@ paths:
 
   /group/{group_id}/sections/:
     get:
+      summary: Retrieve all sections for the group
+      operationId: get_group_sections
       responses:
         200:
           description: OK
@@ -159,6 +179,8 @@ paths:
 
   /event/:
     get:
+      summary: Query for a single event
+      operationId: query_event
       responses:
         200:
           description: OK
@@ -176,6 +198,8 @@ paths:
 
   /events/:
     get:
+      summary: Query for a collection of events
+      operationId: query_events
       responses:
         200:
           description: OK
@@ -193,6 +217,8 @@ paths:
  
   /event/{event_id}/:
     get:
+      summary: Retrieve an event
+      operationId: get_event
       responses:
         200:
           description: OK
@@ -206,6 +232,8 @@ paths:
 
   /event/{event_id}/group/:
     get:
+      summary: Retrieve the group for the event
+      operationId: get_event_group
       responses:
         200:
           description: OK
@@ -219,6 +247,8 @@ paths:
 
   /url/:
     get:
+      summary: Query for a single url
+      operationId: query_url
       responses:
         200:
           description: OK
@@ -236,6 +266,8 @@ paths:
 
   /urls/:
     get:
+      summary: Query for a collection of URLs
+      operationId: query_urls
       responses:
         200:
           description: OK
@@ -253,6 +285,8 @@ paths:
 
   /url/{url_id}/:
     get:
+      summary: Retrieve a URL
+      operationId: get_url
       responses:
         200:
           description: OK
@@ -266,6 +300,8 @@ paths:
 
   /section/:
     get:
+      summary: Query for a single section
+      operationId: query_section
       responses:
         200:
           description: OK
@@ -283,6 +319,8 @@ paths:
 
   /sections/:
     get:
+      summary: Query for a collection of sections
+      operationId: query_sections
       responses:
         200:
           description: OK
@@ -300,6 +338,8 @@ paths:
 
   /section/{section_id}/:
     get:
+      summary: Retrieve a section
+      operationId: get_section
       responses:
         200:
           description: OK
@@ -424,15 +464,14 @@ definitions:
             description: Beschreibung fehlt
             title: End_age schema.
             type: string
+            format: number
           id:
             description: Beschreibung fehlt
             title: Id schema.
             type: string
           kind:
-            description: Beschreibung fehlt
             enum:
               - section
-            title: Kind schema.
             type: string
           name:
             description: Beschreibung fehlt
@@ -442,6 +481,7 @@ definitions:
             description: Beschreibung fehlt
             title: Start_age schema.
             type: string
+            format: number
         type: object
 
   sections:
@@ -477,10 +517,8 @@ definitions:
             title: Id schema.
             type: string
           kind:
-            description: Beschreibung fehlt
             enum:
               - url
-            title: Kind schema.
             type: string
           text:
             description: Beschreibung fehlt
@@ -555,10 +593,8 @@ definitions:
             title: Keywords schema.
             type: object
           kind:
-            description: Beschreibung fehlt
             enum:
               - event
-            title: Kind schema.
             type: string
           last_modified_by:
             description: Beschreibung fehlt
@@ -644,8 +680,6 @@ definitions:
             title: Message schema.
             type: string
           kind:
-            description: Beschreibung fehlt
-            title: Kind schema.
             type: string
             enum:
               - "exception"
